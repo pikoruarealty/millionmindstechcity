@@ -27,6 +27,14 @@ async function readJsonSafe(relPath, fallback) {
   }
 }
 
+async function readTextSafe(relPath) {
+  try {
+    return await readFile(path.join(ROOT, relPath), "utf8");
+  } catch {
+    return null;
+  }
+}
+
 /** Discover every .html file under the repo root, skipping node_modules/.git. */
 async function discoverHtmlFiles(dir = ROOT, out = []) {
   let entries;
@@ -76,6 +84,73 @@ async function fetchManifest(config) {
     console.warn("[apply-seo] manifest fetch errored — continuing without schema:", err.message);
     return { pages: [] };
   }
+}
+
+// Fetches the live sitemap.xml (raw XML, not JSON — same bearer token as the
+// manifest) and writes it to the repo root. Returns the sitemap's own URL
+// (derived from its first <loc>, which the server already computes from a
+// real property's canonical_url) so mergeRobotsTxt can point at it with an
+// absolute URL, as robots.txt's Sitemap: directive requires — never null on
+// success, only on any failure, matching fetchManifest's never-fail posture.
+async function fetchAndWriteSitemap(config) {
+  if (!config?.manifest_token) {
+    console.log("[apply-seo] no manifest token in seo/reip.config.json — skipping sitemap.");
+    return null;
+  }
+  try {
+    const res = await fetch(`${config.api_url}/v1/projects/${config.project_id}/sitemap.xml`, {
+      headers: { authorization: `Bearer ${config.manifest_token}` },
+    });
+    if (!res.ok) {
+      console.warn(`[apply-seo] sitemap fetch failed: ${res.status} — skipping.`);
+      return null;
+    }
+    const xml = await res.text();
+    await writeFile(path.join(ROOT, "sitemap.xml"), xml, "utf8");
+    console.log("[apply-seo] wrote sitemap.xml");
+
+    const firstLoc = xml.match(/<loc>([^<]+)<\/loc>/);
+    if (!firstLoc) return null;
+    const origin = new URL(firstLoc[1]).origin;
+    return `${origin}/sitemap.xml`;
+  } catch (err) {
+    console.warn("[apply-seo] sitemap fetch errored — skipping:", err.message);
+    return null;
+  }
+}
+
+// Adds a Sitemap: line to robots.txt without disturbing anything already
+// there (crawl-delay rules, per-bot Disallow lines, an already-hand-authored
+// Sitemap: line, etc.) — only appends when no matching line exists yet.
+// Creates a minimal robots.txt when none exists at all.
+async function mergeRobotsTxt(sitemapUrl) {
+  if (!sitemapUrl) return;
+  const normalize = (url) => url.trim().replace(/\/+$/, "").toLowerCase();
+  const target = normalize(sitemapUrl);
+
+  const existing = await readTextSafe("robots.txt");
+  if (existing === null) {
+    const content = `User-agent: *\nAllow: /\nSitemap: ${sitemapUrl}\n`;
+    await writeFile(path.join(ROOT, "robots.txt"), content, "utf8");
+    console.log("[apply-seo] created robots.txt with Sitemap: line");
+    return;
+  }
+
+  const alreadyPresent = existing
+    .split(/\r?\n/)
+    .some((line) => {
+      const match = line.match(/^\s*sitemap\s*:\s*(.+)$/i);
+      return match && normalize(match[1]) === target;
+    });
+  if (alreadyPresent) return;
+
+  const separator = existing.endsWith("\n") ? "" : "\n";
+  await writeFile(
+    path.join(ROOT, "robots.txt"),
+    `${existing}${separator}Sitemap: ${sitemapUrl}\n`,
+    "utf8",
+  );
+  console.log("[apply-seo] appended Sitemap: line to existing robots.txt");
 }
 
 function escapeHtml(s) {
@@ -144,6 +219,9 @@ async function main() {
     const route = routeForFile(filePath);
     await applyToFile(filePath, route, metadata[route], manifestByRoute.get(route));
   }
+
+  const sitemapUrl = await fetchAndWriteSitemap(config);
+  await mergeRobotsTxt(sitemapUrl);
 }
 
 main().catch((err) => {
