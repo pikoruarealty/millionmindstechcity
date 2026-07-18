@@ -1,6 +1,6 @@
 # Robots.txt for Million Minds Tech City
 # Sitemap location
-Sitemap: https://millionmindstechcity.in/sitemap.xml
+Sitemap: https://www.millionmindstechcity.in/sitemap.xml
 
 # Allow all crawlers
 User-agent: *
