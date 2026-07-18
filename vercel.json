@@ -1,5 +1,6 @@
 {
   "buildCommand": "node scripts/apply-seo.mjs",
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "cleanUrls": true
 }
