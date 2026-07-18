@@ -8,8 +8,10 @@
 //      keyed by route. Only fields actually present for a route are applied.
 //   2. The REIP schema manifest (fetched using the token in reip.config.json)
 //      — approved JSON-LD, merged into <head> alongside any existing
-//      hand-authored schema (never replaces it; exact-duplicate blocks are
-//      skipped so repeat builds don't pile up copies).
+//      hand-authored schema. Exact-duplicate blocks are skipped so repeat
+//      builds don't pile up copies, and for singleton types (FAQPage,
+//      Organization, …) the approved block supersedes a hand-authored block
+//      of the same type so the page never ships two competing copies.
 //
 // No dependencies beyond Node built-ins.
 
@@ -92,30 +94,48 @@ async function fetchManifest(config) {
 // real property's canonical_url) so mergeRobotsTxt can point at it with an
 // absolute URL, as robots.txt's Sitemap: directive requires — never null on
 // success, only on any failure, matching fetchManifest's never-fail posture.
+// Derives the absolute sitemap URL (origin + /sitemap.xml) from a sitemap's
+// first <loc>, or null if it has none. Used to point robots.txt at whichever
+// sitemap actually survives — the freshly fetched one or the committed one.
+function sitemapUrlFromXml(xml) {
+  const firstLoc = xml && xml.match(/<loc>([^<]+)<\/loc>/);
+  if (!firstLoc) return null;
+  try {
+    return `${new URL(firstLoc[1]).origin}/sitemap.xml`;
+  } catch {
+    return null;
+  }
+}
+
 async function fetchAndWriteSitemap(config) {
   if (!config?.manifest_token) {
     console.log("[apply-seo] no manifest token in seo/reip.config.json — skipping sitemap.");
-    return null;
+    return sitemapUrlFromXml(await readTextSafe("sitemap.xml"));
   }
   try {
     const res = await fetch(`${config.api_url}/v1/projects/${config.project_id}/sitemap.xml`, {
       headers: { authorization: `Bearer ${config.manifest_token}` },
     });
     if (!res.ok) {
-      console.warn(`[apply-seo] sitemap fetch failed: ${res.status} — skipping.`);
-      return null;
+      console.warn(`[apply-seo] sitemap fetch failed: ${res.status} — keeping existing sitemap.xml.`);
+      return sitemapUrlFromXml(await readTextSafe("sitemap.xml"));
     }
     const xml = await res.text();
+    // Never overwrite a good committed sitemap with a URL-less one. The API
+    // returns an empty <urlset> when the project has no active property yet;
+    // clobbering the generator's real sitemap with that empties the live
+    // sitemap, which is strictly worse than leaving the committed one in
+    // place. Only write when the fetched sitemap actually has URLs.
+    if (!/<loc>/.test(xml)) {
+      console.warn("[apply-seo] fetched sitemap has no <loc> entries — keeping existing sitemap.xml.");
+      return sitemapUrlFromXml(await readTextSafe("sitemap.xml"));
+    }
     await writeFile(path.join(ROOT, "sitemap.xml"), xml, "utf8");
     console.log("[apply-seo] wrote sitemap.xml");
-
-    const firstLoc = xml.match(/<loc>([^<]+)<\/loc>/);
-    if (!firstLoc) return null;
-    const origin = new URL(firstLoc[1]).origin;
-    return `${origin}/sitemap.xml`;
+    return sitemapUrlFromXml(xml);
   } catch (err) {
-    console.warn("[apply-seo] sitemap fetch errored — skipping:", err.message);
-    return null;
+    console.warn("[apply-seo] sitemap fetch errored — keeping existing sitemap.xml:", err.message);
+    return sitemapUrlFromXml(await readTextSafe("sitemap.xml"));
   }
 }
 
@@ -170,25 +190,67 @@ function applyMetaDescription(html, description) {
   );
 }
 
+// Schema.org types that must appear at most once per page. Google's Rich
+// Results treats a second block of one of these as a conflict and can ignore
+// the whole set, so when the approved manifest supplies one we drop any
+// hand-authored block of the same type and let the (reviewed, usually richer)
+// manifest block win — leaving exactly one block of that type on the page.
+const SINGLETON_SCHEMA_TYPES = new Set([
+  "FAQPage",
+  "Organization",
+  "WebSite",
+  "BreadcrumbList",
+  "RealEstateListing",
+]);
+
+function schemaTypeOf(block) {
+  const t = block && block["@type"];
+  return typeof t === "string" ? t : null;
+}
+
 function appendSchema(html, jsonLdBlocks) {
   if (!jsonLdBlocks || jsonLdBlocks.length === 0) return html;
-  const existingSet = new Set(
-    [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-      .map((m) => {
-        try {
-          return JSON.stringify(JSON.parse(m[1]));
-        } catch {
-          return null;
-        }
-      })
-      .filter(Boolean),
+
+  const existing = [
+    ...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g),
+  ].map((m) => {
+    let json = null;
+    try {
+      json = JSON.parse(m[1]);
+    } catch {
+      json = null;
+    }
+    return { raw: m[0], json, canon: json ? JSON.stringify(json) : null };
+  });
+
+  // Singleton types the manifest is about to supply — a hand-authored block of
+  // one of these gets removed so it can't compete with the approved block.
+  const manifestSingletons = new Set(
+    jsonLdBlocks.map(schemaTypeOf).filter((t) => t && SINGLETON_SCHEMA_TYPES.has(t)),
   );
-  const toAdd = jsonLdBlocks.map((b) => JSON.stringify(b)).filter((s) => !existingSet.has(s));
-  if (toAdd.length === 0) return html;
+
+  let out = html;
+  const survivors = [];
+  for (const block of existing) {
+    const t = schemaTypeOf(block.json);
+    if (t && manifestSingletons.has(t)) {
+      // String (not regex) replace — raw is matched literally, removed once.
+      out = out.replace(block.raw, "");
+    } else {
+      survivors.push(block);
+    }
+  }
+
+  // Skip manifest blocks byte-identical to one that survived, so repeat builds
+  // don't pile up copies.
+  const survivingCanon = new Set(survivors.map((b) => b.canon).filter(Boolean));
+  const toAdd = jsonLdBlocks.filter((b) => !survivingCanon.has(JSON.stringify(b)));
+  if (toAdd.length === 0) return out;
+
   const scriptTags = toAdd
-    .map((s) => `<script type="application/ld+json">\n${JSON.stringify(JSON.parse(s), null, 2)}\n</script>`)
+    .map((b) => `<script type="application/ld+json">\n${JSON.stringify(b, null, 2)}\n</script>`)
     .join("\n");
-  return html.replace(/<\/head>/i, `\n<!-- REIP: approved schema, auto-injected at build time -->\n${scriptTags}\n</head>`);
+  return out.replace(/<\/head>/i, `\n<!-- REIP: approved schema, auto-injected at build time -->\n${scriptTags}\n</head>`);
 }
 
 async function applyToFile(filePath, route, metadataForRoute, manifestPage) {
