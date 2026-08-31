@@ -271,7 +271,11 @@ async function applyToFile(filePath, route, metadataForRoute, manifestPage) {
 }
 
 async function main() {
-  const config = await readJsonSafe("seo/reip.config.json", null);
+  const fileConfig = await readJsonSafe("seo/reip.config.json", null);
+  // Secrets belong in the deployment environment, never in a tracked config file.
+  const config = fileConfig
+    ? { ...fileConfig, manifest_token: process.env.REIP_MANIFEST_TOKEN || "" }
+    : null;
   const metadata = await readJsonSafe("seo/metadata.json", {});
   const manifest = await fetchManifest(config);
   const manifestByRoute = new Map((manifest.pages ?? []).map((p) => [p.path, p]));

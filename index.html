@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d1b2e">
 <meta name="google-site-verification" content="AgpgJUIXq1t2IBiR9rifo2it3jEMk697gc_6_z_MeUo" />
 
 <!-- PRIMARY SEO -->
-<title>Million Minds Tech City Ahmedabad | IT SEZ & Office Space Near GIFT City</title>
-<meta name="description" content="Explore Million Minds Tech City Ahmedabad – a 65-acre IT SEZ offering premium office spaces near GIFT City & SG Highway. Ideal for IT companies, GCCs & global businesses.">
-<meta name="keywords" content="million minds tech city, IT park Ahmedabad, office space near gift city, commercial property Ahmedabad, IT SEZ Gujarat, GCC India office, tech hub ahmedabad">
+<title>Grade-A Office Space in Ahmedabad | Million Minds Tech City</title>
+<meta name="description" content="Explore Grade-A office space for lease at Million Minds Tech City on S.G. Highway, Ahmedabad—a destination for technology, GCC and enterprise teams.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Million Minds Tech City">
 <link rel="canonical" href="https://www.millionmindstechcity.in/">
+<link rel="preload" as="image" href="./images/08_rockefeller-center.jpg" fetchpriority="high">
 
 <!-- OPEN GRAPH (SOCIAL) -->
-<meta property="og:title" content="Million Minds Tech City Ahmedabad | IT SEZ Near GIFT City">
-<meta property="og:description" content="Premium office spaces and IT infrastructure near GIFT City Ahmedabad. Ideal for global companies and GCC setups.">
+<meta property="og:title" content="Office Space on S.G. Highway, Ahmedabad | Million Minds Tech City">
+<meta property="og:description" content="Premium commercial office space for technology, GCC and enterprise teams in Ahmedabad.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.millionmindstechcity.in/">
 <meta property="og:image" content="https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg">
+<meta property="og:image:alt" content="Million Minds Tech City commercial tower in Ahmedabad">
 <meta property="og:site_name" content="Million Minds Tech City">
 
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Million Minds Tech City Ahmedabad">
-<meta name="twitter:description" content="65-acre IT SEZ near GIFT City with premium office spaces for IT companies and global businesses.">
+<meta name="twitter:title" content="Office Space on S.G. Highway, Ahmedabad | Million Minds Tech City">
+<meta name="twitter:description" content="Premium commercial office space for technology, GCC and enterprise teams in Ahmedabad.">
 <meta name="twitter:image" content="https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg">
 
 <!-- SCHEMA MARKUP -->
@@ -58,6 +60,16 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Million Minds Tech City",
+  "url": "https://www.millionmindstechcity.in/",
+  "inLanguage": "en-IN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -65,7 +77,7 @@
       "name": "What is Million Minds Tech City Ahmedabad?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Million Minds Tech City is a 65-acre IT SEZ near GIFT City offering office spaces for IT companies and global businesses."
+        "text": "Million Minds Tech City is a 65-acre IT/ITeS commercial development in Ahmedabad, with office, retail and mixed-use opportunities."
       }
     },
     {
@@ -73,7 +85,7 @@
       "name": "Where is Million Minds Tech City located?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is located near SG Highway and GIFT City in Ahmedabad, Gujarat."
+        "text": "It is located on S.G. Highway in Ahmedabad, within the broader Ahmedabad–Gandhinagar–GIFT City corridor."
       }
     },
     {
@@ -81,15 +93,15 @@
       "name": "Is it suitable for IT companies and GCCs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, it is designed for IT companies, global capability centers, and multinational corporations."
+        "text": "Technology companies, GCCs, enterprise teams and businesses exploring commercial office space in Ahmedabad can contact the leasing team."
       }
     },
     {
       "@type": "Question",
-      "name": "Is Million Minds Tech City a good investment?",
+      "name": "Can I enquire about office leasing at Million Minds Tech City?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Due to its proximity to GIFT City and infrastructure development, it offers strong long-term investment potential."
+        "text": "Submit the enquiry form with your contact details and requirement. The leasing team will follow up regarding availability and site visits."
       }
     }
   ]
@@ -134,6 +146,11 @@
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(42,170,138,0.8);
+    outline-offset: 3px;
   }
 
   /* ── LOADING SCREEN ── */
@@ -394,8 +411,8 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(13,27,46,0.25) 0%,
-      rgba(13,27,46,0.15) 40%,
+      rgba(13,27,46,0.35) 0%,
+      rgba(13,27,46,0.16) 40%,
       rgba(13,27,46,0.72) 80%,
       rgba(13,27,46,0.88) 100%
     );
@@ -1130,6 +1147,65 @@
     margin-top: 1rem;
   }
 
+  .btn-primary:focus-visible,
+  .btn-outline:focus-visible {
+    outline-color: var(--white);
+  }
+
+  .form-success.is-error {
+    background: rgba(231,76,60,0.1);
+    border-color: rgba(231,76,60,0.35);
+    color: #c0392b;
+  }
+
+  /* ── LEASING & LOCATION ── */
+  #leasing { padding: 6rem 2rem; background: #f5f8fa; }
+  .leasing-inner, .location-inner, .faq-inner { max-width: 1280px; margin: 0 auto; }
+  .leasing-intro { max-width: 730px; margin-bottom: 2.8rem; }
+  .leasing-intro p, .location-copy { color: var(--text-mid); margin-top: 1rem; font-size: 1rem; }
+  .leasing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .leasing-card { padding: 2rem; border: 1px solid #e1e7eb; border-radius: 5px; background: var(--white); transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+  .leasing-card:hover { transform: translateY(-4px); border-color: rgba(42,170,138,0.4); box-shadow: 0 16px 36px rgba(13,27,46,0.09); }
+  .leasing-card-number { color: var(--secondary); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; }
+  .leasing-card h3 { margin: 0.8rem 0; color: var(--primary); font-size: 1.15rem; line-height: 1.35; }
+  .leasing-card p { color: var(--text-mid); font-size: 0.92rem; }
+
+  #location { padding: 6rem 2rem; background: var(--primary); color: var(--white); }
+  .location-inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr); gap: 4rem; align-items: end; }
+  #location .section-title { color: var(--white); }
+  #location .location-copy { color: rgba(255,255,255,0.72); max-width: 650px; }
+  .location-points { display: grid; gap: 0.8rem; }
+  .location-point { padding: 1rem 1.1rem; border-left: 2px solid var(--secondary); background: rgba(255,255,255,0.06); }
+  .location-point strong { display: block; color: var(--white); font-size: 0.9rem; }
+  .location-point span { color: rgba(255,255,255,0.63); font-size: 0.84rem; }
+
+  #faq { padding: 6rem 2rem; background: var(--white); }
+  .faq-layout { display: grid; grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr); gap: 4rem; align-items: start; }
+  .faq-list { border-top: 1px solid #dfe5e9; }
+  .faq-list details { border-bottom: 1px solid #dfe5e9; padding: 1.1rem 0; }
+  .faq-list summary { cursor: pointer; color: var(--primary); font-weight: 700; padding-right: 1rem; }
+  .faq-list p { padding-top: 0.7rem; color: var(--text-mid); font-size: 0.94rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  .form-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+  }
+
+  .form-honeypot,
+  .mg-honeypot {
+    position: absolute !important;
+    left: -10000px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+  }
+
   /* ── FOOTER ── */
   #footer {
     background: var(--primary);
@@ -1327,6 +1403,9 @@
       gap: 3rem;
     }
 
+    .leasing-grid { grid-template-columns: 1fr; }
+    .location-inner, .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
+
     .footer-top {
       grid-template-columns: 1fr 1fr;
     }
@@ -1436,6 +1515,7 @@ body {
     display: grid;
     place-items: center;
     padding: 24px;
+    overflow-y: auto;
     background:
       radial-gradient(circle at top, color-mix(in srgb, var(--mg-brand) 14%, transparent), transparent 38%),
       linear-gradient(135deg, color-mix(in srgb, var(--mg-primary) 10%, white), color-mix(in srgb, var(--mg-accent) 82%, white));
@@ -1568,6 +1648,7 @@ body {
     color: var(--mg-primary);
     cursor: pointer;
   }
+  .mg-resend-btn:disabled { opacity: .6; cursor: wait; }
   .mg-consent { margin: 12px 0 0; text-align: center; color: color-mix(in srgb, var(--mg-primary) 58%, white); font-size: .8rem; }
   .mg-gate-error { min-height: 18px; margin: 10px 0 0; color: var(--mg-error); font-size: .84rem; font-weight: 700; text-align: center; }
   .mg-otp-copy { margin: 0 0 16px; text-align: center; color: color-mix(in srgb, var(--mg-primary) 66%, white); }
@@ -1585,6 +1666,9 @@ body {
       <p class="mg-gate-title">Share your requirements &amp; get exclusive listings.</p>
       <div class="mg-visit-pill">Site Visits - By Appointment Only</div>
       <form id="mg-details-form">
+        <label class="mg-honeypot" aria-hidden="true">Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
         <div class="mg-grid">
           <label class="mg-field">Requirement
             <select name="requirement" id="mg-requirement" required>
@@ -1626,7 +1710,7 @@ body {
         </div>
         <div class="mg-benefits"><span>Instant Call Back</span><span>Floor Plans</span><span>Priority Visit</span></div>
         <button class="mg-primary-btn" id="mg-send-otp" type="submit">Get Exclusive Access</button>
-        <p class="mg-gate-error" id="mg-details-error"></p>
+        <p class="mg-gate-error" id="mg-details-error" aria-live="polite"></p>
         <p class="mg-consent">By submitting, you agree to receive property updates via call, SMS &amp; email.</p>
       </form>
     </div>
@@ -1638,8 +1722,9 @@ body {
           <input type="text" name="otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000" required>
         </label>
         <button class="mg-primary-btn" id="mg-verify-otp" type="submit">Verify &amp; View Site</button>
+        <button class="mg-secondary-btn mg-resend-btn" id="mg-resend-otp" type="button">Resend OTP</button>
         <button class="mg-secondary-btn" id="mg-change-phone" type="button">Change details</button>
-        <p class="mg-gate-error" id="mg-otp-error"></p>
+        <p class="mg-gate-error" id="mg-otp-error" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -1667,6 +1752,7 @@ body {
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#features">Features</a></li>
+      <li><a href="#leasing">Leasing</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
@@ -1674,13 +1760,14 @@ body {
   </div>
 </nav>
 
+<main id="main-content">
 <!-- 2. HERO -->
 <section id="hero" aria-label="Hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Available for Lease · S.G.Highway, Ahmedabad</span>
-    <h1 class="hero-headline">Where Vision Meets the Skyline Million Minds Tech City, Ahmedabad</h1>
-    <p class="hero-subheadline">A landmark mixed-use destination in S.G.Highway, redefining the future of work, retail, and elevated living with iconic glass architecture and panoramic city views.</p>
+    <span class="hero-eyebrow">Office Space for Lease · S.G. Highway, Ahmedabad</span>
+    <h1 class="hero-headline">Premium Office Space on S.G. Highway, Ahmedabad</h1>
+    <p class="hero-subheadline">Million Minds Tech City is a Grade-A commercial destination for technology, GCC and enterprise teams seeking a distinctive workplace in Ahmedabad's growth corridor.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Enquire Now</a>
       <a href="#gallery" class="btn-outline">View Gallery</a>
@@ -1738,7 +1825,51 @@ body {
   </div>
 </section>
 
-<!-- 4. IMAGE GALLERY GRID -->
+<!-- 4. LEASING AUDIENCE -->
+<section id="leasing" aria-label="Office leasing options">
+  <div class="leasing-inner">
+    <div class="leasing-intro reveal">
+      <span class="section-tag">Office Leasing in Ahmedabad</span>
+      <h2 class="section-title">A workplace address built for the teams shaping what comes next.</h2>
+      <p>From corporate headquarters to growing technology teams, Million Minds Tech City brings premium commercial office space to the S.G. Highway business corridor. Share your requirement and the leasing team can guide you on suitable options and site visits.</p>
+    </div>
+    <div class="leasing-grid">
+      <article class="leasing-card reveal">
+        <span class="leasing-card-number">01 / ENTERPRISE</span>
+        <h3>GCC &amp; corporate teams</h3>
+        <p>A considered office address for teams that value presence, a professional setting and space to grow their Ahmedabad operations.</p>
+      </article>
+      <article class="leasing-card reveal" style="transition-delay:0.1s">
+        <span class="leasing-card-number">02 / TECHNOLOGY</span>
+        <h3>IT &amp; ITeS workplaces</h3>
+        <p>Explore office space for technology and knowledge teams looking to establish a future-facing base in Ahmedabad.</p>
+      </article>
+      <article class="leasing-card reveal" style="transition-delay:0.2s">
+        <span class="leasing-card-number">03 / MIXED USE</span>
+        <h3>Retail &amp; hospitality concepts</h3>
+        <p>Discuss opportunities for complementary business concepts within a landmark mixed-use commercial environment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LOCATION -->
+<section id="location" aria-label="S.G. Highway location advantage">
+  <div class="location-inner">
+    <div class="reveal-left">
+      <span class="section-tag">Location Advantage</span>
+      <h2 class="section-title">At the intersection of Ahmedabad's business energy and tomorrow's opportunity.</h2>
+      <p class="location-copy">Situated on S.G. Highway, Million Minds Tech City places businesses within Ahmedabad's established commercial landscape and along the wider Ahmedabad–Gandhinagar–GIFT City corridor.</p>
+    </div>
+    <div class="location-points reveal-right">
+      <div class="location-point"><strong>S.G. Highway, Ahmedabad</strong><span>An established commercial address for office and business activity.</span></div>
+      <div class="location-point"><strong>Ahmedabad–Gandhinagar corridor</strong><span>Connected to two of Gujarat's key business centres.</span></div>
+      <div class="location-point"><strong>GIFT City corridor</strong><span>Relevant for teams tracking Gujarat's growing finance and technology ecosystem.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. IMAGE GALLERY GRID -->
 <section id="gallery" aria-label="Property gallery">
   <div class="section-header reveal">
     <div class="section-title-wrap">
@@ -1748,7 +1879,7 @@ body {
   </div>
   <div class="gallery-grid">
     <div class="gallery-item reveal" data-index="0">
-      <img src="./images/08_rockefeller-center.jpg" alt="Million Minds Tech – City exterior" loading="lazy">
+      <img src="./images/08_rockefeller-center.jpg" alt="Million Minds Tech – City exterior" width="1200" height="961" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1756,7 +1887,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.05s" data-index="1">
-      <img src="./images/01_gallery10.jpg" alt="Million Minds Tech City tower against the Ahmedabad skyline" loading="lazy">
+      <img src="./images/01_gallery10.jpg" alt="Million Minds Tech City tower against the Ahmedabad skyline" width="1200" height="800" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1764,7 +1895,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.1s" data-index="2">
-      <img src="./images/02_ganesh.jpg" alt="Million Minds Tech City masterplan development" loading="lazy">
+      <img src="./images/02_ganesh.jpg" alt="Million Minds Tech City masterplan development" width="1200" height="801" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1772,7 +1903,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.15s" data-index="3">
-      <img src="./images/03_master_hotel.jpg" alt="Million Minds Tech City hotel tower" loading="lazy">
+      <img src="./images/03_master_hotel.jpg" alt="Million Minds Tech City hotel tower" width="1200" height="675" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1780,7 +1911,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.2s" data-index="4">
-      <img src="./images/04_master_mall.jpg" alt="Million Minds Tech City retail mall atrium" loading="lazy">
+      <img src="./images/04_master_mall.jpg" alt="Million Minds Tech City retail mall atrium" width="1200" height="675" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1788,7 +1919,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.25s" data-index="5">
-      <img src="./images/05_phase-coliving-new.jpg" alt="Million Minds Tech City co-living residences" loading="lazy">
+      <img src="./images/05_phase-coliving-new.jpg" alt="Million Minds Tech City co-living residences" width="1200" height="675" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1796,7 +1927,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.3s" data-index="6">
-      <img src="./images/06_phase-residences.jpg" alt="Million Minds Tech City residential tower" loading="lazy">
+      <img src="./images/06_phase-residences.jpg" alt="Million Minds Tech City residential tower" width="1200" height="675" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1804,7 +1935,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.35s" data-index="7">
-      <img src="./images/07_phase-tower.jpg" alt="Million Minds Tech City commercial office tower" loading="lazy">
+      <img src="./images/07_phase-tower.jpg" alt="Million Minds Tech City commercial office tower" width="1200" height="675" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1812,7 +1943,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.4s" data-index="8">
-      <img src="./images/09_rsp.jpg" alt="Million Minds Tech City architectural elevation" loading="lazy">
+      <img src="./images/09_rsp.jpg" alt="Million Minds Tech City architectural elevation" width="1200" height="961" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1820,7 +1951,7 @@ body {
       </div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:0.45s" data-index="9">
-      <img src="./images/10_visitor-centre.jpg" alt="Million Minds Tech City visitor centre" loading="lazy">
+      <img src="./images/10_visitor-centre.jpg" alt="Million Minds Tech City visitor centre" width="1200" height="585" loading="lazy">
       <div class="gallery-overlay">
         <div class="gallery-zoom-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1846,34 +1977,34 @@ body {
   </button>
 </div>
 
-<!-- 5. ABOUT / DESCRIPTION -->
+<!-- 7. ABOUT / DESCRIPTION -->
 <section id="about" aria-label="About the property">
   <div class="about-inner">
     <div class="about-image-stack reveal-left">
-      <img class="about-img-main" src="./images/07_phase-tower.jpg" alt="Million Minds Tech tower" loading="lazy">
-      <img class="about-img-accent" src="./images/04_master_mall.jpg" alt="Retail atrium interior" loading="lazy">
+    <img class="about-img-main" src="./images/07_phase-tower.jpg" alt="Million Minds Tech tower" width="1200" height="675" loading="lazy">
+    <img class="about-img-accent" src="./images/04_master_mall.jpg" alt="Retail atrium interior" width="1200" height="675" loading="lazy">
       <div class="about-badge">
-        <span class="badge-num">A+</span>
-        <span class="badge-text">Grade Office</span>
+        <span class="badge-num">IT</span>
+        <span class="badge-text">Business District</span>
       </div>
     </div>
     <div class="about-content reveal-right">
       <span class="section-tag">About the Property</span>
       <h2 class="section-title">A Statement of Ambition in Glass &amp; Light</h2>
       <div class="about-divider"></div>
-      <p class="about-description">Million Minds Tech – City rises as Ahmedabad's most architecturally iconic mixed-use complex, where full-glass curtain wall facades and a sweeping curved glass entrance pavilion command instant presence on the S.G.Highway skyline. Inside, a soaring multi-level retail atrium crowned by a luminous glass dome gives way to floor-to-ceiling glazed office floors, lush tropical landscaping, sculpted rock installations, and rooftop sky terraces that blur the boundary between built form and open sky. From twilight architectural lighting that transforms the tower into a beacon after dark to crystal-appointed luxury suites and panoramic city vistas, this is not simply a place to do business — it is a statement of ambition made permanent in glass and light.</p>
+      <p class="about-description">Million Minds Tech City is conceived as a distinctive mixed-use commercial destination on S.G. Highway, Ahmedabad. Its contemporary glass architecture, office floors, retail spaces and shared environments create a setting designed for businesses that want their workplace to make a clear statement. Enquire with the leasing team for current availability, space requirements and a site visit.</p>
       <div class="about-stats">
         <div class="stat-item">
           <div class="stat-value">Mixed</div>
           <div class="stat-label">Use Complex</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value">360°</div>
-          <div class="stat-label">City Views</div>
+          <div class="stat-value">S.G.</div>
+          <div class="stat-label">Highway Address</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value">LEED</div>
-          <div class="stat-label">Green Design</div>
+          <div class="stat-value">IT</div>
+          <div class="stat-label">Business Focus</div>
         </div>
         <div class="stat-item">
           <div class="stat-value">Lease</div>
@@ -1885,7 +2016,35 @@ body {
   </div>
 </section>
 
-<!-- 6. CONTACT -->
+<!-- 8. FAQ -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="faq-inner faq-layout">
+    <div class="reveal-left">
+      <span class="section-tag">Leasing FAQ</span>
+      <h2 class="section-title">Useful answers before your site visit.</h2>
+    </div>
+    <div class="faq-list reveal-right">
+      <details open>
+        <summary>What is Million Minds Tech City?</summary>
+        <p>Million Minds Tech City is a 65-acre IT/ITeS commercial development in Ahmedabad, with office, retail and mixed-use opportunities.</p>
+      </details>
+      <details>
+        <summary>Where is Million Minds Tech City located?</summary>
+        <p>It is located on S.G. Highway in Ahmedabad, within the broader Ahmedabad–Gandhinagar–GIFT City corridor.</p>
+      </details>
+      <details>
+        <summary>Who can enquire about office space?</summary>
+        <p>Technology companies, GCCs, enterprise teams and businesses exploring commercial office space in Ahmedabad can contact the leasing team.</p>
+      </details>
+      <details>
+        <summary>How do I arrange a leasing consultation?</summary>
+        <p>Submit the enquiry form with your contact details and requirement. The leasing team will follow up regarding availability and site visits.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT -->
 <section id="contact" aria-label="Contact and enquiry">
   <div class="contact-inner">
     <div class="contact-info reveal-left">
@@ -1914,6 +2073,9 @@ body {
     <div class="contact-form-wrap reveal-right">
       <h3>Request a Leasing Consultation</h3>
       <form id="contactForm" novalidate>
+        <label class="form-honeypot" aria-hidden="true">Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
         <div class="form-row">
           <div class="form-group">
             <label for="fname">Full Name</label>
@@ -1944,7 +2106,7 @@ body {
           <textarea id="message" name="message" placeholder="Tell us about your requirements, preferred floor, area needed, etc." required></textarea>
         </div>
         <button type="submit" class="form-submit">Send Enquiry</button>
-        <div class="form-success" id="formSuccess" role="alert">
+        <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
           ✓ Thank you! Your enquiry has been received. Our leasing team will contact you shortly.
         </div>
       </form>
@@ -1952,7 +2114,8 @@ body {
   </div>
 </section>
 
-<!-- 7. FOOTER -->
+ </main>
+<!-- 10. FOOTER -->
 <footer id="footer" aria-label="Footer">
   <div class="footer-accent-line"></div>
   <div class="footer-inner">
@@ -1970,6 +2133,10 @@ body {
           <li><a href="#features">Features</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About us</a></li>
+          <li><a href="/office-space-sg-highway-ahmedabad">S.G. Highway Offices</a></li>
+          <li><a href="/office-space-near-gift-city">GIFT City Corridor</a></li>
+          <li><a href="/it-park-ahmedabad">IT Park Ahmedabad</a></li>
+          <li><a href="/localities/s-g-highway-ahmedabad">S.G. Highway Guide</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -2200,17 +2367,41 @@ body {
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending…';
           }
+          if (formSuccess) formSuccess.style.display = 'none';
 
-          setTimeout(function () {
-            if (formSuccess) {
-              formSuccess.style.display = 'block';
-            }
-            contactForm.reset();
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.textContent = 'Send Enquiry';
-            }
-          }, 900);
+          var payload = Object.fromEntries(new FormData(contactForm).entries());
+          fetch('/api/submit-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+            .then(function (res) {
+              return res.json().catch(function () { return {}; }).then(function (data) {
+                if (!res.ok) throw new Error(data.error || 'Your enquiry could not be sent.');
+                return data;
+              });
+            })
+            .then(function () {
+              if (formSuccess) {
+                formSuccess.classList.remove('is-error');
+                formSuccess.textContent = '✓ Thank you! Your enquiry has been sent to our leasing team.';
+                formSuccess.style.display = 'block';
+              }
+              contactForm.reset();
+            })
+            .catch(function (err) {
+              if (formSuccess) {
+                formSuccess.classList.add('is-error');
+                formSuccess.textContent = err.message || 'Your enquiry could not be sent. Please try again.';
+                formSuccess.style.display = 'block';
+              }
+            })
+            .finally(function () {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Enquiry';
+              }
+            });
         }
       });
 
@@ -2272,10 +2463,8 @@ body {
 <script id="mg-otp-gate-script">
 (function () {
   "use strict";
-  var jobId = "f493dc99f7c2";
-  var configuredApiBase = "https://microsite-generator-production-41b1.up.railway.app";
-  var apiBase = (window.MICROSITE_API_BASE || configuredApiBase || "").replace(/\/$/, "");
-  var storageKey = "mg_verified_" + jobId;
+  var storageKey = "million_minds_verified";
+  var accessDuration = 30 * 24 * 60 * 60 * 1000;
   var body = document.body;
   var gate = document.getElementById("mg-otp-gate");
   var site = document.getElementById("mg-site-content");
@@ -2292,24 +2481,38 @@ body {
   var otpError = document.getElementById("mg-otp-error");
   var phoneLabel = document.getElementById("mg-phone-label");
   var changeBtn = document.getElementById("mg-change-phone");
+  var resendBtn = document.getElementById("mg-resend-otp");
   var lead = null;
+  var challenge = "";
+  var resendTimer = null;
 
-  function endpoint(path) {
-    return apiBase + "/microsite/" + encodeURIComponent(jobId) + path;
+  function requestJson(url, payload) {
+    return fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (!res.ok) throw new Error(data.error || "Something went wrong. Please try again.");
+        return data;
+      });
+    });
   }
 
   function unlock() {
-    try { window.localStorage.setItem(storageKey, "1"); } catch (err) {}
+    try { window.localStorage.setItem(storageKey, String(Date.now() + accessDuration)); } catch (err) {}
     body.classList.remove("mg-locked");
     if (site) site.removeAttribute("aria-hidden");
     if (gate) gate.remove();
   }
 
   try {
-    if (window.localStorage.getItem(storageKey) === "1") {
+    var verifiedUntil = Number(window.localStorage.getItem(storageKey) || 0);
+    if (verifiedUntil > Date.now()) {
       unlock();
       return;
     }
+    window.localStorage.removeItem(storageKey);
   } catch (err) {}
 
   if (site) site.setAttribute("aria-hidden", "true");
@@ -2321,8 +2524,7 @@ body {
     if (isOther) otherInput.focus();
   });
 
-  detailsForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+  function collectLead() {
     detailsError.textContent = "";
     var data = new FormData(detailsForm);
     var requirement = String(data.get("requirement") || "").trim();
@@ -2335,36 +2537,68 @@ body {
       last_name: String(data.get("last_name") || "").trim(),
       email: String(data.get("email") || "").trim(),
       country_code: String(data.get("country_code") || "+91").trim(),
-      phone: phone
+      phone: phone,
+      website: String(data.get("website") || "")
     };
     if (!lead.requirement || !lead.budget || !lead.first_name || !lead.last_name || !lead.email || !lead.phone) {
       detailsError.textContent = "Please complete all required fields.";
-      return;
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email)) {
+      detailsError.textContent = "Please enter a valid email address.";
+      return false;
     }
     if (!/^\d{10}$/.test(lead.phone)) {
       detailsError.textContent = "Please enter a valid 10-digit phone number.";
-      return;
+      return false;
     }
-    sendBtn.disabled = true;
-    sendBtn.textContent = "Sending OTP...";
-    fetch(endpoint("/request-otp"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(lead)
-    })
-      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+    return true;
+  }
+
+  function startResendCooldown(seconds) {
+    var remaining = seconds || 30;
+    clearInterval(resendTimer);
+    resendBtn.disabled = true;
+    resendBtn.textContent = "Resend OTP in " + remaining + "s";
+    resendTimer = setInterval(function () {
+      remaining -= 1;
+      if (remaining <= 0) {
+        clearInterval(resendTimer);
+        resendBtn.disabled = false;
+        resendBtn.textContent = "Resend OTP";
+      } else {
+        resendBtn.textContent = "Resend OTP in " + remaining + "s";
+      }
+    }, 1000);
+  }
+
+  function sendOtp(button, errorTarget) {
+    button.disabled = true;
+    var originalText = button.textContent;
+    button.textContent = "Sending OTP...";
+    errorTarget.textContent = "";
+    return requestJson("/api/request-otp", lead)
       .then(function (result) {
-        if (!result.ok) throw new Error(result.data.error || "Could not send OTP.");
+        if (!result.challenge) throw new Error("OTP could not be started. Please try again.");
+        challenge = result.challenge;
         phoneLabel.textContent = "IN +91 " + lead.phone;
         detailsStep.classList.add("mg-hidden");
         otpStep.classList.remove("mg-hidden");
+        otpForm.reset();
         otpForm.elements.otp.focus();
+        startResendCooldown(30);
       })
-      .catch(function (err) { detailsError.textContent = err.message || "Could not send OTP."; })
+      .catch(function (err) { errorTarget.textContent = err.message || "Could not send OTP."; })
       .finally(function () {
-        sendBtn.disabled = false;
-        sendBtn.textContent = "Get Exclusive Access";
+        if (button !== resendBtn || !resendBtn.disabled) button.disabled = false;
+        if (button === sendBtn) button.textContent = "Get Exclusive Access";
+        else if (!resendBtn.disabled) button.textContent = originalText;
       });
+  }
+
+  detailsForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (collectLead()) sendOtp(sendBtn, detailsError);
   });
 
   otpForm.addEventListener("submit", function (event) {
@@ -2377,14 +2611,8 @@ body {
     }
     verifyBtn.disabled = true;
     verifyBtn.textContent = "Verifying...";
-    fetch(endpoint("/verify-otp"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone: lead && lead.phone, otp: code })
-    })
-      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
-      .then(function (result) {
-        if (!result.ok) throw new Error(result.data.error || "Verification failed.");
+    requestJson("/api/verify-otp", { challenge: challenge, otp: code })
+      .then(function () {
         unlock();
       })
       .catch(function (err) { otpError.textContent = err.message || "Verification failed."; })
@@ -2394,7 +2622,13 @@ body {
       });
   });
 
+  resendBtn.addEventListener("click", function () {
+    if (lead) sendOtp(resendBtn, otpError);
+  });
+
   changeBtn.addEventListener("click", function () {
+    clearInterval(resendTimer);
+    challenge = "";
     otpError.textContent = "";
     otpStep.classList.add("mg-hidden");
     detailsStep.classList.remove("mg-hidden");

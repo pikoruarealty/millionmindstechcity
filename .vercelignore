@@ -1,0 +1,6 @@
+# Keep local secrets and machine-specific folders out of every Vercel upload.
+.env
+.env.*
+.vercel
+node_modules
+.git
