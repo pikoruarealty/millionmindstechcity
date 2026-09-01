@@ -1,9 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/apply-seo.mjs",
+  "buildCommand": "node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs",
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "millionmindstechcity.in" }],
+      "destination": "https://www.millionmindstechcity.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/office-space-near-vaishnodevi-circle",
+      "destination": "/office-space-vaishnodevi-circle-ahmedabad",
+      "permanent": true
+    }
+  ],
   "functions": {
     "api/**/*.mjs": {
       "maxDuration": 10

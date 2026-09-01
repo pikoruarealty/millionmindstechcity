@@ -1,22 +1,977 @@
 {
   "/": {
-    "meta_description": "Explore Grade-A office space for lease at Million Minds Tech City on S.G. Highway, Ahmedabad—a destination for technology, GCC and enterprise teams.",
-    "title": "Grade-A Office Space in Ahmedabad | Million Minds Tech City"
+    "slug": "/",
+    "canonical_url": "https://www.millionmindstechcity.in/",
+    "title": "Million Minds Tech City Ahmedabad | Offices, M One & Location",
+    "meta_description": "Explore Million Minds Tech City Ahmedabad: location, M One, Grade-A office space, developer details, companies, specifications and leasing information.",
+    "h1": "Million Minds Tech City Ahmedabad",
+    "primary_keyword": "million minds tech city ahmedabad",
+    "secondary_keywords": [
+      "million minds tech city",
+      "million minds tech city office space",
+      "MMTC Ahmedabad"
+    ],
+    "search_intent": "brand/entity",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Ahmedabad | Offices, M One & Location",
+    "og_description": "Explore Million Minds Tech City Ahmedabad: location, M One, Grade-A office space, developer details, companies, specifications and leasing information.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog": {
+    "slug": "/blog",
+    "canonical_url": "https://www.millionmindstechcity.in/blog",
+    "title": "Million Minds Tech City Blog | Ahmedabad Office & GCC Insights",
+    "meta_description": "Read source-backed guides on Million Minds Tech City, M One, SG Highway, Ahmedabad office leasing, IT/ITeS SEZs, GCC location strategy and project updates.",
+    "h1": "Million Minds Tech City Insights",
+    "primary_keyword": "million minds tech city blog",
+    "secondary_keywords": [
+      "Ahmedabad office space guide",
+      "GCC Ahmedabad insights"
+    ],
+    "search_intent": "editorial hub",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Blog | Ahmedabad Office & GCC Insights",
+    "og_description": "Read source-backed guides on Million Minds Tech City, M One, SG Highway, Ahmedabad office leasing, IT/ITeS SEZs, GCC location strategy and project updates.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-address-location": {
+    "slug": "/million-minds-tech-city-address-location",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-address-location",
+    "title": "Million Minds Tech City Address & Location | Ahmedabad",
+    "meta_description": "Find the verified Million Minds Tech City location in Ahmedabad, SG Highway and Vaishnodevi Circle context, nearby landmarks, map guidance and GIFT City corridor details.",
+    "h1": "Million Minds Tech City Address & Location, Ahmedabad",
+    "primary_keyword": "million minds tech city address",
+    "secondary_keywords": [
+      "million minds tech city location",
+      "million minds tech city Ahmedabad map"
+    ],
+    "search_intent": "informational/navigational",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Address & Location | Ahmedabad",
+    "og_description": "Find the verified Million Minds Tech City location in Ahmedabad, SG Highway and Vaishnodevi Circle context, nearby landmarks, map guidance and GIFT City corridor details.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-companies": {
+    "slug": "/million-minds-tech-city-companies",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-companies",
+    "title": "Companies at Million Minds Tech City | Ahmedabad Occupier Tracker",
+    "meta_description": "See publicly announced, reported and verified companies associated with Million Minds Tech City Ahmedabad, with status, dates and source-backed occupier updates.",
+    "h1": "Companies at Million Minds Tech City Ahmedabad",
+    "primary_keyword": "million minds tech city companies",
+    "secondary_keywords": [
+      "companies in million minds tech city",
+      "million minds tech city occupiers"
+    ],
+    "search_intent": "informational/navigational",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Companies at Million Minds Tech City | Ahmedabad Occupier Tracker",
+    "og_description": "See publicly announced, reported and verified companies associated with Million Minds Tech City Ahmedabad, with status, dates and source-backed occupier updates.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/m-one-million-minds-tech-city": {
+    "slug": "/m-one-million-minds-tech-city",
+    "canonical_url": "https://www.millionmindstechcity.in/m-one-million-minds-tech-city",
+    "title": "M One Ahmedabad | Million Minds Tech City Office & Specifications",
+    "meta_description": "Explore M One at Million Minds Tech City Ahmedabad: floor plate, workplace specifications, SEZ context, enterprise suitability and office leasing information.",
+    "h1": "M One at Million Minds Tech City Ahmedabad",
+    "primary_keyword": "M One Ahmedabad",
+    "secondary_keywords": [
+      "M One Million Minds Tech City",
+      "M One Ahmedabad specifications"
+    ],
+    "search_intent": "informational/commercial",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "M One Ahmedabad | Million Minds Tech City Office & Specifications",
+    "og_description": "Explore M One at Million Minds Tech City Ahmedabad: floor plate, workplace specifications, SEZ context, enterprise suitability and office leasing information.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-office-space": {
+    "slug": "/million-minds-tech-city-office-space",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-office-space",
+    "title": "Million Minds Tech City Office Space | Ahmedabad Leasing Guide",
+    "meta_description": "Explore Grade-A office space at Million Minds Tech City Ahmedabad, including enterprise requirements, leasing options, location advantages and site-visit guidance.",
+    "h1": "Office Space at Million Minds Tech City Ahmedabad",
+    "primary_keyword": "million minds tech city office space",
+    "secondary_keywords": [
+      "million minds tech city leasing",
+      "Grade A office space Ahmedabad"
+    ],
+    "search_intent": "commercial",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Office Space | Ahmedabad Leasing Guide",
+    "og_description": "Explore Grade-A office space at Million Minds Tech City Ahmedabad, including enterprise requirements, leasing options, location advantages and site-visit guidance.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-amenities": {
+    "slug": "/million-minds-tech-city-amenities",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-amenities",
+    "title": "Million Minds Tech City Amenities | Work, Retail & Lifestyle",
+    "meta_description": "Review publicly described Million Minds Tech City amenities across workplace, wellness, food, mobility and business-support categories in Ahmedabad.",
+    "h1": "Amenities at Million Minds Tech City",
+    "primary_keyword": "amenities at million minds tech city",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Amenities | Work, Retail & Lifestyle",
+    "og_description": "Review publicly described Million Minds Tech City amenities across workplace, wellness, food, mobility and business-support categories in Ahmedabad.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-specifications": {
+    "slug": "/million-minds-tech-city-specifications",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-specifications",
+    "title": "Million Minds Tech City & M One Specifications | Ahmedabad",
+    "meta_description": "Review source-backed Million Minds Tech City and M One specifications, including floor plates, building systems, sustainability and enterprise infrastructure.",
+    "h1": "Million Minds Tech City & M One Specifications",
+    "primary_keyword": "million minds tech city specifications",
+    "secondary_keywords": [
+      "M One specifications Ahmedabad",
+      "million minds tech city floor plate"
+    ],
+    "search_intent": "informational/commercial",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City & M One Specifications | Ahmedabad",
+    "og_description": "Review source-backed Million Minds Tech City and M One specifications, including floor plates, building systems, sustainability and enterprise infrastructure.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-developer": {
+    "slug": "/million-minds-tech-city-developer",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-developer",
+    "title": "Million Minds Tech City Developer | Ganesh Housing Limited",
+    "meta_description": "Learn who developed Million Minds Tech City Ahmedabad, the role of Ganesh Housing Limited, and the project’s design and development-management partners.",
+    "h1": "Who Developed Million Minds Tech City?",
+    "primary_keyword": "million minds tech city developer",
+    "secondary_keywords": [
+      "who developed million minds tech city",
+      "Ganesh Housing Million Minds Tech City"
+    ],
+    "search_intent": "informational/navigational",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Developer | Ganesh Housing Limited",
+    "og_description": "Learn who developed Million Minds Tech City Ahmedabad, the role of Ganesh Housing Limited, and the project’s design and development-management partners.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-sez": {
+    "slug": "/million-minds-tech-city-sez",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-sez",
+    "title": "Million Minds Tech City SEZ | Ahmedabad IT/ITeS SEZ Guide",
+    "meta_description": "Understand the IT/ITeS SEZ context of Million Minds Tech City Ahmedabad, policy references, enterprise relevance and what businesses should verify before leasing.",
+    "h1": "Million Minds Tech City SEZ Explained",
+    "primary_keyword": "million minds tech city SEZ",
+    "secondary_keywords": [
+      "million minds tech city IT SEZ",
+      "IT SEZ Ahmedabad"
+    ],
+    "search_intent": "informational/commercial",
+    "priority": "P0",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City SEZ | Ahmedabad IT/ITeS SEZ Guide",
+    "og_description": "Understand the IT/ITeS SEZ context of Million Minds Tech City Ahmedabad, policy references, enterprise relevance and what businesses should verify before leasing.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/gcc-office-space-ahmedabad": {
+    "slug": "/gcc-office-space-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/gcc-office-space-ahmedabad",
+    "title": "GCC Office Space in Ahmedabad | Enterprise Location Guide",
+    "meta_description": "Compare office-location factors for Global Capability Centres in Ahmedabad, including SG Highway, GIFT City corridor access, Grade-A infrastructure and scalability.",
+    "h1": "GCC Office Space in Ahmedabad",
+    "primary_keyword": "GCC office space Ahmedabad",
+    "secondary_keywords": [
+      "Global Capability Centre office Ahmedabad",
+      "Gujarat GCC office space"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "GCC Office Space in Ahmedabad | Enterprise Location Guide",
+    "og_description": "Compare office-location factors for Global Capability Centres in Ahmedabad, including SG Highway, GIFT City corridor access, Grade-A infrastructure and scalability.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/office-space-vaishnodevi-circle-ahmedabad": {
+    "slug": "/office-space-vaishnodevi-circle-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/office-space-vaishnodevi-circle-ahmedabad",
+    "title": "Office Space Near Vaishnodevi Circle Ahmedabad | SG Highway",
+    "meta_description": "Explore office space near Vaishnodevi Circle Ahmedabad, including SG Highway access, Nirma University proximity and enterprise workspace considerations.",
+    "h1": "Office Space Near Vaishnodevi Circle, Ahmedabad",
+    "primary_keyword": "office space Vaishnodevi Circle Ahmedabad",
+    "secondary_keywords": [
+      "commercial office near Vaishnodevi Circle",
+      "office space near Nirma University Ahmedabad"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Office Space Near Vaishnodevi Circle Ahmedabad | SG Highway",
+    "og_description": "Explore office space near Vaishnodevi Circle Ahmedabad, including SG Highway access, Nirma University proximity and enterprise workspace considerations.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
   },
   "/office-space-sg-highway-ahmedabad": {
-    "meta_description": "Explore premium commercial office space on S.G. Highway, Ahmedabad at Million Minds Tech City. Enquire about leasing options, site visits and workspace requirements.",
-    "title": "Office Space on S.G. Highway, Ahmedabad | Million Minds Tech City"
+    "slug": "/office-space-sg-highway-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/office-space-sg-highway-ahmedabad",
+    "title": "Office Space on SG Highway Ahmedabad | Million Minds Tech City",
+    "meta_description": "Explore office space on SG Highway Ahmedabad, with Grade-A workplace considerations, corridor advantages and Million Minds Tech City leasing information.",
+    "h1": "Office Space on S.G. Highway, Ahmedabad",
+    "primary_keyword": "office space SG Highway Ahmedabad",
+    "secondary_keywords": [
+      "Grade A office space SG Highway Ahmedabad",
+      "office leasing SG Highway Ahmedabad"
+    ],
+    "search_intent": "commercial",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Office Space on SG Highway Ahmedabad | Million Minds Tech City",
+    "og_description": "Explore office space on SG Highway Ahmedabad, with Grade-A workplace considerations, corridor advantages and Million Minds Tech City leasing information.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
   },
   "/office-space-near-gift-city": {
-    "meta_description": "Considering office space near the GIFT City corridor? Explore Million Minds Tech City on S.G. Highway, Ahmedabad for technology, GCC and enterprise leasing enquiries.",
-    "title": "Office Space Near GIFT City Corridor | Million Minds Tech City"
+    "slug": "/office-space-near-gift-city",
+    "canonical_url": "https://www.millionmindstechcity.in/office-space-near-gift-city",
+    "title": "Office Space Near GIFT City Corridor | Ahmedabad Guide",
+    "meta_description": "Explore office-space options in the Ahmedabad–Gandhinagar–GIFT City corridor and how Million Minds Tech City differs from being located inside GIFT City.",
+    "h1": "Office Space Near the GIFT City Corridor",
+    "primary_keyword": "office space near GIFT City",
+    "secondary_keywords": [
+      "office space Ahmedabad GIFT City corridor",
+      "commercial office near GIFT City Ahmedabad"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Office Space Near GIFT City Corridor | Ahmedabad Guide",
+    "og_description": "Explore office-space options in the Ahmedabad–Gandhinagar–GIFT City corridor and how Million Minds Tech City differs from being located inside GIFT City.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
   },
   "/it-park-ahmedabad": {
-    "meta_description": "Explore Grade-A IT and ITeS office space in Ahmedabad at Million Minds Tech City for technology teams, GCCs and enterprise leasing enquiries.",
-    "title": "IT Park in Ahmedabad | Grade-A Office Space | Million Minds Tech City"
+    "slug": "/it-park-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/it-park-ahmedabad",
+    "title": "IT Park Ahmedabad | IT/ITeS & Enterprise Office Guide",
+    "meta_description": "Explore IT parks in Ahmedabad and the factors enterprise, technology and GCC teams should evaluate for infrastructure, SEZ context, scale and connectivity.",
+    "h1": "IT Park in Ahmedabad for Enterprise & Technology Teams",
+    "primary_keyword": "IT park Ahmedabad",
+    "secondary_keywords": [
+      "tech park Ahmedabad",
+      "SEZ IT park Ahmedabad"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "IT Park Ahmedabad | IT/ITeS & Enterprise Office Guide",
+    "og_description": "Explore IT parks in Ahmedabad and the factors enterprise, technology and GCC teams should evaluate for infrastructure, SEZ context, scale and connectivity.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
   },
   "/localities/s-g-highway-ahmedabad": {
-    "meta_description": "Explore the S.G. Highway office corridor in Ahmedabad: commercial connectivity, workplace planning and Grade-A office leasing at Million Minds Tech City.",
-    "title": "S.G. Highway Office Space Guide, Ahmedabad | Million Minds Tech City"
+    "slug": "/localities/s-g-highway-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/localities/s-g-highway-ahmedabad",
+    "title": "SG Highway Ahmedabad Business & Office Location Guide",
+    "meta_description": "A practical SG Highway Ahmedabad business-location guide covering commercial districts, enterprise office factors, connectivity and major workplace nodes.",
+    "h1": "S.G. Highway Ahmedabad Business Location Guide",
+    "primary_keyword": "SG Highway Ahmedabad business district",
+    "secondary_keywords": [
+      "office space SG Highway Ahmedabad",
+      "business park Ahmedabad SG Highway"
+    ],
+    "search_intent": "local informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "SG Highway Ahmedabad Business & Office Location Guide",
+    "og_description": "A practical SG Highway Ahmedabad business-location guide covering commercial districts, enterprise office factors, connectivity and major workplace nodes.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/million-minds-tech-city-news": {
+    "slug": "/million-minds-tech-city-news",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-news",
+    "title": "Million Minds Tech City News & Updates | Ahmedabad",
+    "meta_description": "Follow source-backed Million Minds Tech City Ahmedabad updates, M One milestones, public occupier announcements, leasing news and project developments.",
+    "h1": "Million Minds Tech City News & Updates",
+    "primary_keyword": "million minds tech city latest news",
+    "secondary_keywords": [
+      "million minds tech city updates",
+      "M One Ahmedabad news"
+    ],
+    "search_intent": "freshness/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City News & Updates | Ahmedabad",
+    "og_description": "Follow source-backed Million Minds Tech City Ahmedabad updates, M One milestones, public occupier announcements, leasing news and project developments.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/large-office-space-ahmedabad": {
+    "slug": "/large-office-space-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/large-office-space-ahmedabad",
+    "title": "Large Office Space in Ahmedabad | Enterprise & GCC Guide",
+    "meta_description": "Evaluate large office space in Ahmedabad by floor-plate efficiency, Grade-A systems, scalability, resilience and location for enterprise and GCC teams.",
+    "h1": "Large Office Space in Ahmedabad",
+    "primary_keyword": "large office space Ahmedabad",
+    "secondary_keywords": [
+      "large floor plate office Ahmedabad",
+      "enterprise office space Ahmedabad"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Large Office Space in Ahmedabad | Enterprise & GCC Guide",
+    "og_description": "Evaluate large office space in Ahmedabad by floor-plate efficiency, Grade-A systems, scalability, resilience and location for enterprise and GCC teams.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/managed-office-ahmedabad-sg-highway": {
+    "slug": "/managed-office-ahmedabad-sg-highway",
+    "canonical_url": "https://www.millionmindstechcity.in/managed-office-ahmedabad-sg-highway",
+    "title": "Managed Office on SG Highway Ahmedabad | Enterprise Guide",
+    "meta_description": "Explore managed office and flexible workspace options on SG Highway Ahmedabad for enterprise, GCC and technology teams seeking faster occupancy and scalability.",
+    "h1": "Managed Office Space on SG Highway, Ahmedabad",
+    "primary_keyword": "managed office SG Highway Ahmedabad",
+    "secondary_keywords": [
+      "managed office Ahmedabad",
+      "managed workspace Million Minds Tech City"
+    ],
+    "search_intent": "commercial/research",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Managed Office on SG Highway Ahmedabad | Enterprise Guide",
+    "og_description": "Explore managed office and flexible workspace options on SG Highway Ahmedabad for enterprise, GCC and technology teams seeking faster occupancy and scalability.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/million-minds-tech-city-ahmedabad-guide": {
+    "slug": "/blog/million-minds-tech-city-ahmedabad-guide",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/million-minds-tech-city-ahmedabad-guide",
+    "title": "Million Minds Tech City Ahmedabad: Complete 2026 Guide",
+    "meta_description": "A sourced 2026 guide to Million Minds Tech City Ahmedabad covering location, M One, offices, amenities, companies and due diligence.",
+    "h1": "Million Minds Tech City Ahmedabad: Complete 2026 Guide",
+    "primary_keyword": "million minds tech city ahmedabad: complete 2026 guide",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Ahmedabad: Complete 2026 Guide",
+    "og_description": "A sourced 2026 guide to Million Minds Tech City Ahmedabad covering location, M One, offices, amenities, companies and due diligence.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/companies-in-million-minds-tech-city": {
+    "slug": "/blog/companies-in-million-minds-tech-city",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/companies-in-million-minds-tech-city",
+    "title": "Companies in Million Minds Tech City: Reported Occupiers",
+    "meta_description": "Review publicly reported companies associated with Million Minds Tech City, with status cautions, source links and a verification framework.",
+    "h1": "Companies in Million Minds Tech City: Reported Occupiers",
+    "primary_keyword": "companies in million minds tech city: reported occupiers",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Companies in Million Minds Tech City: Reported Occupiers",
+    "og_description": "Review publicly reported companies associated with Million Minds Tech City, with status cautions, source links and a verification framework.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/million-minds-tech-city-address-location-guide": {
+    "slug": "/blog/million-minds-tech-city-address-location-guide",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/million-minds-tech-city-address-location-guide",
+    "title": "Million Minds Tech City Address, Location & How to Reach",
+    "meta_description": "Plan a visit to Million Minds Tech City with its public Ahmedabad address, SG Highway context and accurate GIFT City clarification.",
+    "h1": "Million Minds Tech City Address, Location & How to Reach",
+    "primary_keyword": "million minds tech city address, location & how to reach",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City Address, Location & How to Reach",
+    "og_description": "Plan a visit to Million Minds Tech City with its public Ahmedabad address, SG Highway context and accurate GIFT City clarification.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/m-one-floor-plates-specifications-leasing": {
+    "slug": "/blog/m-one-floor-plates-specifications-leasing",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/m-one-floor-plates-specifications-leasing",
+    "title": "M One: Floor Plates, Specifications & Leasing Guide",
+    "meta_description": "Understand M One floor plates, public specifications and the technical questions enterprise occupiers should ask before leasing.",
+    "h1": "M One: Floor Plates, Specifications & Leasing",
+    "primary_keyword": "m one: floor plates, specifications & leasing",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "M One: Floor Plates, Specifications & Leasing Guide",
+    "og_description": "Understand M One floor plates, public specifications and the technical questions enterprise occupiers should ask before leasing.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/million-minds-tech-city-vs-gift-city": {
+    "slug": "/blog/million-minds-tech-city-vs-gift-city",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/million-minds-tech-city-vs-gift-city",
+    "title": "Million Minds Tech City vs GIFT City: Office Comparison",
+    "meta_description": "Compare Million Minds Tech City and GIFT City by location, regulatory context, talent, ecosystem and office decision criteria.",
+    "h1": "Million Minds Tech City vs GIFT City: Office Ecosystem Comparison",
+    "primary_keyword": "million minds tech city vs gift city: office ecosystem comparison",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Million Minds Tech City vs GIFT City: Office Comparison",
+    "og_description": "Compare Million Minds Tech City and GIFT City by location, regulatory context, talent, ecosystem and office decision criteria.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/office-space-sg-highway-ahmedabad-guide": {
+    "slug": "/blog/office-space-sg-highway-ahmedabad-guide",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/office-space-sg-highway-ahmedabad-guide",
+    "title": "Office Space on SG Highway Ahmedabad: 2026 Guide",
+    "meta_description": "A 2026 decision guide for office space on SG Highway Ahmedabad covering location, buildings, lease comparison and workplace planning.",
+    "h1": "Office Space on SG Highway Ahmedabad: 2026 Business Guide",
+    "primary_keyword": "office space on sg highway ahmedabad: 2026 business guide",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Office Space on SG Highway Ahmedabad: 2026 Guide",
+    "og_description": "A 2026 decision guide for office space on SG Highway Ahmedabad covering location, buildings, lease comparison and workplace planning.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/why-ahmedabad-is-emerging-as-gcc-destination": {
+    "slug": "/blog/why-ahmedabad-is-emerging-as-gcc-destination",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/why-ahmedabad-is-emerging-as-gcc-destination",
+    "title": "Why Ahmedabad Is Emerging as a GCC Destination",
+    "meta_description": "Explore why Ahmedabad is entering more GCC location discussions and how enterprises should test talent, resilience, cost and ecosystem claims.",
+    "h1": "Why Ahmedabad Is Emerging as a GCC Destination",
+    "primary_keyword": "why ahmedabad is emerging as a gcc destination",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Why Ahmedabad Is Emerging as a GCC Destination",
+    "og_description": "Explore why Ahmedabad is entering more GCC location discussions and how enterprises should test talent, resilience, cost and ecosystem claims.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/it-park-ahmedabad-evaluation-guide": {
+    "slug": "/blog/it-park-ahmedabad-evaluation-guide",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/it-park-ahmedabad-evaluation-guide",
+    "title": "IT Park in Ahmedabad: Enterprise Evaluation Guide",
+    "meta_description": "Use this practical checklist to evaluate an IT park in Ahmedabad for infrastructure, talent, security, scalability and total occupancy cost.",
+    "h1": "IT Park in Ahmedabad: What Global Companies Should Evaluate",
+    "primary_keyword": "it park in ahmedabad: what global companies should evaluate",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "IT Park in Ahmedabad: Enterprise Evaluation Guide",
+    "og_description": "Use this practical checklist to evaluate an IT park in Ahmedabad for infrastructure, talent, security, scalability and total occupancy cost.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/what-makes-grade-a-office-building": {
+    "slug": "/blog/what-makes-grade-a-office-building",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/what-makes-grade-a-office-building",
+    "title": "What Makes a Grade A Office Building?",
+    "meta_description": "Learn how to evaluate Grade A office claims using location, floor efficiency, resilience, safety, sustainability and management evidence.",
+    "h1": "What Makes a Grade A Office Building?",
+    "primary_keyword": "what makes a grade a office building?",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "What Makes a Grade A Office Building?",
+    "og_description": "Learn how to evaluate Grade A office claims using location, floor efficiency, resilience, safety, sustainability and management evidence.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/sez-vs-non-sez-office-space-gujarat": {
+    "slug": "/blog/sez-vs-non-sez-office-space-gujarat",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/sez-vs-non-sez-office-space-gujarat",
+    "title": "SEZ vs Non-SEZ Office Space in Gujarat",
+    "meta_description": "Compare SEZ and non-SEZ office space in Gujarat at a practical level, including approvals, operations, compliance and professional advice.",
+    "h1": "SEZ vs Non-SEZ Office Space in Gujarat: Practical Guide",
+    "primary_keyword": "sez vs non-sez office space in gujarat: practical guide",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "SEZ vs Non-SEZ Office Space in Gujarat",
+    "og_description": "Compare SEZ and non-SEZ office space in Gujarat at a practical level, including approvals, operations, compliance and professional advice.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/who-developed-million-minds-tech-city": {
+    "slug": "/blog/who-developed-million-minds-tech-city",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/who-developed-million-minds-tech-city",
+    "title": "Who Developed Million Minds Tech City? Ganesh Housing & Partners",
+    "meta_description": "A source-backed explanation of the developer, development-management and architectural-design roles behind Million Minds Tech City Ahmedabad.",
+    "h1": "Ganesh Housing and the Partners Behind Million Minds Tech City",
+    "primary_keyword": "ganesh housing and the partners behind million minds tech city",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Who Developed Million Minds Tech City? Ganesh Housing & Partners",
+    "og_description": "A source-backed explanation of the developer, development-management and architectural-design roles behind Million Minds Tech City Ahmedabad.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/is-million-minds-tech-city-an-sez": {
+    "slug": "/blog/is-million-minds-tech-city-an-sez",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/is-million-minds-tech-city-an-sez",
+    "title": "Is Million Minds Tech City an SEZ? IT/ITeS Context Explained",
+    "meta_description": "Understand the publicly described Million Minds Tech City IT/ITeS SEZ context and the exact checks an office occupier should complete.",
+    "h1": "Is Million Minds Tech City an IT/ITeS SEZ?",
+    "primary_keyword": "is million minds tech city an it/ites sez?",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Is Million Minds Tech City an SEZ? IT/ITeS Context Explained",
+    "og_description": "Understand the publicly described Million Minds Tech City IT/ITeS SEZ context and the exact checks an office occupier should complete.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/best-office-locations-ahmedabad-gcc": {
+    "slug": "/blog/best-office-locations-ahmedabad-gcc",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/best-office-locations-ahmedabad-gcc",
+    "title": "Best Office Locations in Ahmedabad for GCC Teams",
+    "meta_description": "Compare Ahmedabad office-location criteria for GCC teams across SG Highway, Gandhinagar and the wider GIFT City corridor.",
+    "h1": "Best Office Locations in Ahmedabad for GCC Teams",
+    "primary_keyword": "best office locations in ahmedabad for gcc teams",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Best Office Locations in Ahmedabad for GCC Teams",
+    "og_description": "Compare Ahmedabad office-location criteria for GCC teams across SG Highway, Gandhinagar and the wider GIFT City corridor.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/blog/large-floor-plates-enterprise-office-planning": {
+    "slug": "/blog/large-floor-plates-enterprise-office-planning",
+    "canonical_url": "https://www.millionmindstechcity.in/blog/large-floor-plates-enterprise-office-planning",
+    "title": "Large Floor Plates: Enterprise Office Planning Guide",
+    "meta_description": "Learn how large floor plates affect enterprise workplace efficiency, security, collaboration, resilience and future growth.",
+    "h1": "Why Large Floor Plates Matter for Enterprise Office Planning",
+    "primary_keyword": "why large floor plates matter for enterprise office planning",
+    "secondary_keywords": [],
+    "search_intent": "editorial/informational",
+    "priority": "P1",
+    "last_modified": "2026-09-01",
+    "og_title": "Large Floor Plates: Enterprise Office Planning Guide",
+    "og_description": "Learn how large floor plates affect enterprise workplace efficiency, security, collaboration, resilience and future growth.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "BlogPosting",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/about": {
+    "slug": "/about",
+    "canonical_url": "https://www.millionmindstechcity.in/about",
+    "title": "About This Website | Million Minds Tech City Ahmedabad Guide",
+    "meta_description": "Learn who operates this independent Million Minds Tech City information and leasing-assistance website, its purpose and its limitations.",
+    "h1": "About This Website",
+    "primary_keyword": "about this website",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "About This Website | Million Minds Tech City Ahmedabad Guide",
+    "og_description": "Learn who operates this independent Million Minds Tech City information and leasing-assistance website, its purpose and its limitations.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "AboutPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/contact": {
+    "slug": "/contact",
+    "canonical_url": "https://www.millionmindstechcity.in/contact",
+    "title": "Contact PIKORUA Realty | Million Minds Tech City Enquiries",
+    "meta_description": "Contact the independent leasing-assistance team for Million Minds Tech City office requirements, source corrections or website questions.",
+    "h1": "Contact the Leasing & Research Team",
+    "primary_keyword": "contact the leasing & research team",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Contact PIKORUA Realty | Million Minds Tech City Enquiries",
+    "og_description": "Contact the independent leasing-assistance team for Million Minds Tech City office requirements, source corrections or website questions.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/editorial-policy": {
+    "slug": "/editorial-policy",
+    "canonical_url": "https://www.millionmindstechcity.in/editorial-policy",
+    "title": "Editorial Policy | Million Minds Tech City Independent Guide",
+    "meta_description": "Read the editorial, correction, sourcing and AI-assistance standards used by this independent Ahmedabad commercial-property website.",
+    "h1": "Editorial Policy",
+    "primary_keyword": "editorial policy",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Editorial Policy | Million Minds Tech City Independent Guide",
+    "og_description": "Read the editorial, correction, sourcing and AI-assistance standards used by this independent Ahmedabad commercial-property website.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/sources-methodology": {
+    "slug": "/sources-methodology",
+    "canonical_url": "https://www.millionmindstechcity.in/sources-methodology",
+    "title": "Sources & Methodology | Million Minds Tech City Research",
+    "meta_description": "See how Million Minds Tech City project, company, location and office-market claims are sourced, verified, labelled and updated.",
+    "h1": "Sources & Verification Methodology",
+    "primary_keyword": "sources & verification methodology",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Sources & Methodology | Million Minds Tech City Research",
+    "og_description": "See how Million Minds Tech City project, company, location and office-market claims are sourced, verified, labelled and updated.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/privacy-policy": {
+    "slug": "/privacy-policy",
+    "canonical_url": "https://www.millionmindstechcity.in/privacy-policy",
+    "title": "Privacy Policy | millionmindstechcity.in",
+    "meta_description": "Read how millionmindstechcity.in handles enquiry details, technical information, service providers, retention and privacy requests.",
+    "h1": "Privacy Policy",
+    "primary_keyword": "privacy policy",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Privacy Policy | millionmindstechcity.in",
+    "og_description": "Read how millionmindstechcity.in handles enquiry details, technical information, service providers, retention and privacy requests.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/terms": {
+    "slug": "/terms",
+    "canonical_url": "https://www.millionmindstechcity.in/terms",
+    "title": "Website Terms | millionmindstechcity.in",
+    "meta_description": "Read the terms governing use of this independent Million Minds Tech City information and leasing-assistance website.",
+    "h1": "Website Terms",
+    "primary_keyword": "website terms",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Website Terms | millionmindstechcity.in",
+    "og_description": "Read the terms governing use of this independent Million Minds Tech City information and leasing-assistance website.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
+  "/disclaimer": {
+    "slug": "/disclaimer",
+    "canonical_url": "https://www.millionmindstechcity.in/disclaimer",
+    "title": "Independent Website Disclaimer | Million Minds Tech City Guide",
+    "meta_description": "Important independent-site, project-information, availability, pricing and professional-advice disclaimers for millionmindstechcity.in.",
+    "h1": "Independent Website Disclaimer",
+    "primary_keyword": "independent website disclaimer",
+    "secondary_keywords": [],
+    "search_intent": "informational",
+    "priority": "P2",
+    "last_modified": "2026-09-01",
+    "og_title": "Independent Website Disclaimer | Million Minds Tech City Guide",
+    "og_description": "Important independent-site, project-information, availability, pricing and professional-advice disclaimers for millionmindstechcity.in.",
+    "og_image": "https://www.millionmindstechcity.in/images/08_rockefeller-center.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
   }
 }

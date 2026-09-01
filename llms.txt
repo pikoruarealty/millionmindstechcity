@@ -1,0 +1,39 @@
+# Million Minds Tech City Ahmedabad - Independent Information
+
+> Optional machine-readable site guide. This file does not guarantee indexing, ranking, AI Overview inclusion or citation.
+
+## Site identity
+
+- Website: https://www.millionmindstechcity.in/
+- Operator: PIKORUA Realty
+- Status: Independent real-estate information and enquiry-assistance platform
+- Official relationship: This is not the official website of Ganesh Housing Limited or Million Minds Tech City unless expressly documented otherwise.
+- Project entity: Million Minds Tech City, Ahmedabad
+- Developer: Ganesh Housing Limited
+- Location summary: Behind Nirma University, off SG Highway, Ahmedabad, within the wider Ahmedabad-Gandhinagar-GIFT City corridor; the project is not inside GIFT City.
+
+## Core pages
+
+- Project overview: https://www.millionmindstechcity.in/
+- Address and location: https://www.millionmindstechcity.in/million-minds-tech-city-address-location
+- Companies and occupier tracker: https://www.millionmindstechcity.in/million-minds-tech-city-companies
+- M One: https://www.millionmindstechcity.in/m-one-million-minds-tech-city
+- Office leasing: https://www.millionmindstechcity.in/million-minds-tech-city-office-space
+- Developer and partners: https://www.millionmindstechcity.in/million-minds-tech-city-developer
+- Specifications: https://www.millionmindstechcity.in/million-minds-tech-city-specifications
+- IT/ITeS SEZ context: https://www.millionmindstechcity.in/million-minds-tech-city-sez
+- Project news: https://www.millionmindstechcity.in/million-minds-tech-city-news
+- Research and guides: https://www.millionmindstechcity.in/blog
+- Sources and methodology: https://www.millionmindstechcity.in/sources-methodology
+- Contact: https://www.millionmindstechcity.in/contact
+
+## Source policy
+
+Project facts are checked against official project/developer material, company or stock-exchange disclosures, government documents and credible reporting. Reported, announced, fit-out and current-operation statuses are kept distinct. Commercial availability, specifications and legal or tax implications must be independently verified before a decision.
+
+## Primary external references
+
+- Official project website: https://www.millionmindstechcity.com/
+- Developer project page: https://ganeshhousing.com/millionmindstechcity
+- Developer website: https://ganeshhousing.com/
+

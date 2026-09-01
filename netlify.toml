@@ -1,13 +1,25 @@
 # Netlify Configuration
 
 [build]
-  command = "node scripts/apply-seo.mjs"
+  command = "node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs"
   publish = "."
 
 # Redirect all HTTP to HTTPS
 [[redirects]]
   from = "http://*"
   to = "https://:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://millionmindstechcity.in/*"
+  to = "https://www.millionmindstechcity.in/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/office-space-near-vaishnodevi-circle"
+  to = "/office-space-vaishnodevi-circle-ahmedabad"
   status = 301
   force = true
 

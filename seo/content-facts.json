@@ -1,0 +1,68 @@
+{
+  "last_reviewed": "2026-09-01",
+  "facts": [
+    {
+      "claim": "project_developer",
+      "value": "Ganesh Housing Limited",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "verified_primary_source"
+    },
+    {
+      "claim": "project_scale",
+      "value": "Approximately 65 acres",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "published_master_plan_fact"
+    },
+    {
+      "claim": "project_location",
+      "value": "Behind Nirma University, off SG Highway, Ahmedabad, Gujarat",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "verified_primary_source_address_wording"
+    },
+    {
+      "claim": "m_one_floor_plate",
+      "value": "42,000+ sq. ft. carpet floor plate",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "published_project_specification"
+    },
+    {
+      "claim": "m_one_floor_height",
+      "value": "Approximately 4.2 metres",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "published_project_specification"
+    },
+    {
+      "claim": "sez_context",
+      "value": "IT/ITeS Special Economic Zone context",
+      "source_name": "Ganesh Housing – Million Minds Tech City",
+      "source_url": "https://ganeshhousing.com/millionmindstechcity",
+      "source_date": "2026-09-01",
+      "last_verified": "2026-09-01",
+      "status": "published_project_context"
+    },
+    {
+      "claim": "reported_companies",
+      "value": "IBM, TCS, Searce, Valtech, Withum, Kashiv BioSciences, DevX and APSER Life Sciences were publicly reported in connection with planned operations or workspace activity",
+      "source_name": "Times of India, 18 May 2026; DevX NSE newsletter, 30 March 2026",
+      "source_url": "https://timesofindia.indiatimes.com/city/ahmedabad/big-tech-firms-mncs-eye-new-tech-park-in-ahmedabad/articleshow/131161085.cms",
+      "source_date": "2026-05-18",
+      "last_verified": "2026-09-01",
+      "status": "reported_not_current_operation_confirmed"
+    }
+  ]
+}

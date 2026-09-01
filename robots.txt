@@ -1,37 +1,34 @@
-# Robots.txt for Million Minds Tech City
-# Sitemap location
-Sitemap: https://www.millionmindstechcity.in/sitemap.xml
-
-# Allow all crawlers
 User-agent: *
 Allow: /
-Allow: /images/
-Allow: *.js
-Allow: *.css
 
-# Disallow admin pages (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Crawler-specific rules
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: Slurp
+User-agent: OAI-SearchBot
 Allow: /
-Crawl-delay: 1
 
-# Block bad bots
-User-agent: MJ12bot
-Disallow: /
+User-agent: GPTBot
+Allow: /
 
-User-agent: AhrefsBot
-Disallow: /
+User-agent: ChatGPT-User
+Allow: /
 
-User-agent: SemrushBot
-Disallow: /
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.millionmindstechcity.in/sitemap.xml
