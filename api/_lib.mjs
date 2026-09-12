@@ -34,20 +34,18 @@ export class PublicError extends Error {
 
 export function publicErrorResponse(error, fallback) {
   if (error instanceof PublicError) return json({ error: error.message }, error.status);
-  console.error(fallback, error);
-  return json({ error: fallback }, 500);
+  const reference = randomUUID().slice(0, 8);
+  console.error(`[lead-api:${reference}] ${fallback}`, error);
+  return json({ error: fallback, reference }, 500);
 }
 
-export function getConfig() {
-  const required = [
-    "OTP_SECRET",
-    "TWO_FACTOR_API_KEY",
-    "SUPABASE_URL",
-    "SUPABASE_SERVICE_ROLE_KEY",
-  ];
+export function getConfig({ requireDatabase = false, requireSms = false } = {}) {
+  const required = [];
+  if (requireDatabase || requireSms) required.push("OTP_SECRET", "SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY");
+  if (requireSms) required.push("TWO_FACTOR_API_KEY");
   const missing = required.filter((key) => !process.env[key]);
   if (missing.length) throw new Error(`Missing environment variables: ${missing.join(", ")}`);
-  if (process.env.OTP_SECRET.length < 32) throw new Error("OTP_SECRET must be at least 32 characters.");
+  if ((requireDatabase || requireSms) && process.env.OTP_SECRET.length < 32) throw new Error("OTP_SECRET must be at least 32 characters.");
 
   return {
     apiKey: process.env.BREVO_API_KEY,
@@ -60,6 +58,18 @@ export function getConfig() {
     supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     otpMinutes: Math.min(Math.max(Number(process.env.OTP_EXPIRES_MINUTES) || 5, 2), 10),
   };
+}
+
+export function enforceSameOrigin(request) {
+  const origin = request.headers.get("origin");
+  if (!origin) return;
+  let parsed;
+  try { parsed = new URL(origin); } catch { throw new PublicError("Request origin is not allowed.", 403); }
+  const requestHost = request.headers.get("host") || new URL(request.url).host;
+  const allowedProductionHosts = new Set(["www.millionmindstechcity.in", "millionmindstechcity.in"]);
+  const isSameHost = parsed.host === requestHost;
+  const isAllowedProductionOrigin = parsed.protocol === "https:" && allowedProductionHosts.has(parsed.host);
+  if (!isSameHost && !isAllowedProductionOrigin) throw new PublicError("Request origin is not allowed.", 403);
 }
 
 export function clean(value, max = 250) {

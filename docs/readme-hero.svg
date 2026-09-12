@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Million Minds Tech City Ahmedabad</title>
+  <desc id="desc">Animated project banner for the website repository</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081525"/>
+      <stop offset="0.55" stop-color="#12325a"/>
+      <stop offset="1" stop-color="#08755b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3c82df"/>
+      <stop offset="1" stop-color="#27d49c"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="reveal"><rect x="110" y="112" width="0" height="120"><animate attributeName="width" from="0" to="980" dur="1.4s" fill="freeze"/></rect></clipPath>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#background)"/>
+  <g opacity="0.18">
+    <path d="M0 90H1200M0 180H1200M0 270H1200M150 0V360M300 0V360M450 0V360M600 0V360M750 0V360M900 0V360M1050 0V360" stroke="#a7e9d4" stroke-width="1"/>
+  </g>
+  <circle cx="980" cy="70" r="150" fill="#1aa67c" opacity="0.09"><animate attributeName="r" values="135;165;135" dur="5s" repeatCount="indefinite"/></circle>
+  <circle cx="1050" cy="280" r="95" fill="#4f91e8" opacity="0.1"><animate attributeName="cy" values="270;245;270" dur="4s" repeatCount="indefinite"/></circle>
+  <g transform="translate(92 66)" filter="url(#glow)">
+    <path d="M0 74L42 0l42 74H65L42 35 19 74z" fill="#3c82df"/>
+    <path d="M54 74L96 0l42 74h-19L96 35 73 74z" fill="#21b57d"/>
+  </g>
+  <g clip-path="url(#reveal)">
+    <text x="110" y="188" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" letter-spacing="1">MILLION MINDS</text>
+    <text x="114" y="230" fill="#63e2b9" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="9">TECH CITY · AHMEDABAD</text>
+  </g>
+  <rect x="112" y="257" width="0" height="4" rx="2" fill="url(#accent)">
+    <animate attributeName="width" values="0;570;570" keyTimes="0;0.55;1" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="112" y="303" fill="#c8d6e5" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2">58 INDEXABLE PAGES · SEO-FIRST · LEAD READY</text>
+  <g fill="#7ff0ca">
+    <circle cx="870" cy="286" r="4"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="900" cy="286" r="4"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="930" cy="286" r="4"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0.6s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

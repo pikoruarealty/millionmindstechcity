@@ -20,3 +20,19 @@ Deploy the repository to Vercel normally. The static site is served from the roo
 Before deployment, run [supabase/schema.sql](supabase/schema.sql) in Supabase SQL Editor. See [SUPABASE_SETUP.md](SUPABASE_SETUP.md) for the required RLS and secret-handling steps.
 
 Never put the real values from `.env.example` inside `index.html` or commit a real `.env` file. The public page can see endpoint URLs such as `/api/request-otp`, but it can never see the provider keys or server-side API source.
+
+## Lead API verification
+
+Run the mocked integration test before deployment. It does not contact Supabase, Brevo or 2Factor and does not create a real lead:
+
+```powershell
+node scripts/test-lead-api.mjs
+```
+
+Run the read-only provider check when `.env.local` contains the intended production credentials. It displays only status information and never prints credentials or lead data:
+
+```powershell
+node scripts/check-lead-services.mjs
+```
+
+If a valid `/api/submit-lead` request returns HTTP 500 while invalid input correctly returns HTTP 400, inspect the Vercel Function log using the short `reference` returned in the 500 JSON response. Confirm that the Production environment—not only Local or Preview—contains an active `SUPABASE_URL` and matching `SUPABASE_SERVICE_ROLE_KEY`, and that `supabase/schema.sql` has been applied to that exact project.

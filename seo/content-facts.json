@@ -1,5 +1,5 @@
 {
-  "last_reviewed": "2026-09-01",
+  "last_reviewed": "2026-09-12",
   "facts": [
     {
       "claim": "project_developer",
@@ -7,7 +7,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "verified_primary_source"
     },
     {
@@ -16,7 +16,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "published_master_plan_fact"
     },
     {
@@ -25,7 +25,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "verified_primary_source_address_wording"
     },
     {
@@ -34,7 +34,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "published_project_specification"
     },
     {
@@ -43,7 +43,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "published_project_specification"
     },
     {
@@ -52,7 +52,7 @@
       "source_name": "Ganesh Housing – Million Minds Tech City",
       "source_url": "https://ganeshhousing.com/millionmindstechcity",
       "source_date": "2026-09-01",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "published_project_context"
     },
     {
@@ -61,8 +61,26 @@
       "source_name": "Times of India, 18 May 2026; DevX NSE newsletter, 30 March 2026",
       "source_url": "https://timesofindia.indiatimes.com/city/ahmedabad/big-tech-firms-mncs-eye-new-tech-park-in-ahmedabad/articleshow/131161085.cms",
       "source_date": "2026-05-18",
-      "last_verified": "2026-09-01",
+      "last_verified": "2026-09-12",
       "status": "reported_not_current_operation_confirmed"
+    },
+    {
+      "claim": "public_inauguration_milestone",
+      "value": "Press Information Bureau reported the inauguration of the newly built Million Minds Tech Park in Ahmedabad on 17 May 2026",
+      "source_name": "Press Information Bureau, Government of India",
+      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2262002&lang=1&reg=20",
+      "source_date": "2026-05-17",
+      "last_verified": "2026-09-12",
+      "status": "verified_government_source"
+    },
+    {
+      "claim": "incuspaze_announced_lease",
+      "value": "Incuspaze announced a 60,000 sq. ft. workspace lease with capacity for more than 1,200 seats",
+      "source_name": "Incuspaze company announcement",
+      "source_url": "https://www.incuspaze.com/resource/blog/incuspaze-leases-60000-sq-ft-office-space-in-milli",
+      "source_date": "2026-05-19",
+      "last_verified": "2026-09-12",
+      "status": "reported_by_company_current_status_requires_reconfirmation"
     }
   ]
 }

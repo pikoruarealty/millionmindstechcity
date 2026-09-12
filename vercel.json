@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs",
+  "buildCommand": "node scripts/test-lead-api.mjs && node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs",
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
@@ -30,7 +30,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' https://www.millionmindstechcity.com; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';" }
       ]
     }
   ]

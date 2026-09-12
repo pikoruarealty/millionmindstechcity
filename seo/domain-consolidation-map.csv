@@ -1,0 +1,37 @@
+source_url,target_url,status,notes
+https://www.millionmindstechcity.com/,https://www.millionmindstechcity.in/,ready,Primary entity homepage
+https://www.millionmindstechcity.com/aboutus.html,https://www.millionmindstechcity.in/million-minds-tech-city-developer,ready,Developer and project ownership intent
+https://www.millionmindstechcity.com/blog.html,https://www.millionmindstechcity.in/blog,ready,Editorial hub
+https://www.millionmindstechcity.com/commercial-project-near-sg-highway-gift-city.html,https://www.millionmindstechcity.in/office-space-near-gift-city,ready,Closest matching corridor intent
+https://www.millionmindstechcity.com/contactus.html,https://www.millionmindstechcity.in/contact,ready,Contact intent
+https://www.millionmindstechcity.com/faq.html,https://www.millionmindstechcity.in/#faq,ready,Homepage contains visible matching FAQ
+https://www.millionmindstechcity.com/grade-a-office-space-ahmedabad-future-workplace.html,https://www.millionmindstechcity.in/blog/what-makes-grade-a-office-building,ready,Grade-A evaluation intent
+https://www.millionmindstechcity.com/key-highlights.html,https://www.millionmindstechcity.in/million-minds-tech-city-amenities,ready,Closest current highlights destination
+https://www.millionmindstechcity.com/lifestyle.html,https://www.millionmindstechcity.in/million-minds-tech-city-amenities,ready,Lifestyle and amenity intent
+https://www.millionmindstechcity.com/masterplan.html,https://www.millionmindstechcity.in/million-minds-tech-city-specifications,ready,Masterplan and specification research intent
+https://www.millionmindstechcity.com/media-center.html,https://www.millionmindstechcity.in/million-minds-tech-city-news,ready,News and media intent
+https://www.millionmindstechcity.com/million-minds-tech-city-launch.html,https://www.millionmindstechcity.in/million-minds-tech-city-news,ready,Launch milestone covered in news cluster
+https://www.millionmindstechcity.com/million-minds-tech-city-premier-office-spaces-ahmedabad.html,https://www.millionmindstechcity.in/million-minds-tech-city-office-space,ready,Commercial office-space intent
+https://www.millionmindstechcity.com/phase1.html,https://www.millionmindstechcity.in/m-one-million-minds-tech-city,ready,Phase 1 M One intent
+https://www.millionmindstechcity.com/redefining-office-leasing-in-ahmedabad.html,https://www.millionmindstechcity.in/million-minds-tech-city-office-space,ready,Office leasing intent
+https://www.millionmindstechcity.com/a-defining-moment-for-million-minds-tech-city.html,https://www.millionmindstechcity.in/million-minds-tech-city-news,review,Confirm the destination includes the specific budget article before redirect
+https://www.millionmindstechcity.com/brokers-meet/index.html,https://www.millionmindstechcity.in/events/brokers-meet,create_first,Publish equivalent event archive before redirect
+https://www.millionmindstechcity.com/event.html,https://www.millionmindstechcity.in/events,create_first,Publish event hub before redirect
+https://www.millionmindstechcity.com/events/index.html,https://www.millionmindstechcity.in/events,create_first,Publish event hub before redirect
+https://www.millionmindstechcity.com/events/registrationform.html,https://www.millionmindstechcity.in/events,review,Redirect only when registration is closed and archive explains the event
+https://www.millionmindstechcity.com/ganesh-housing-gate-2026-gcci-annual-trade-expo-gandhinagar.html,https://www.millionmindstechcity.in/events/gate-2026-gcci-trade-expo,create_first,Preserve event-specific relevance
+https://www.millionmindstechcity.com/gcc-summit-2025-global-capability-centres-policy-dialogue.html,https://www.millionmindstechcity.in/events/gcc-summit-2025,create_first,Preserve event-specific relevance
+https://www.millionmindstechcity.com/it-ites-gcc-roadshow-bengaluru-gujarat-it-policy-infrastructure.html,https://www.millionmindstechcity.in/events/gcc-roadshow-bengaluru-2025,create_first,Preserve event-specific relevance
+https://www.millionmindstechcity.com/it-ites-gcc-roadshow-hyderabad-tech-expansion-dialogue.html,https://www.millionmindstechcity.in/events/gcc-roadshow-hyderabad-2025,create_first,Preserve event-specific relevance
+https://www.millionmindstechcity.com/assets/pdf/brochure.pdf,https://www.millionmindstechcity.in/resources/million-minds-tech-city-brochure.pdf,migrate_file,Copy owned PDF and add canonical HTTP Link header before redirect
+https://www.millionmindstechcity.com/assets/pdf/gcc_policy.pdf,https://www.millionmindstechcity.in/resources/gujarat-gcc-policy.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/pdf/ifsc-vs-sez.pdf,https://www.millionmindstechcity.in/resources/ifsc-vs-sez.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/pdf/igbc-green-building.pdf,https://www.millionmindstechcity.in/resources/igbc-green-building.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/pdf/it-policy.pdf,https://www.millionmindstechcity.in/resources/gujarat-it-policy.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/pdf/privacy_policy.pdf,https://www.millionmindstechcity.in/privacy-policy,ready,HTML privacy policy is the preferred destination
+https://www.millionmindstechcity.com/assets/pdf/sez-benefits.pdf,https://www.millionmindstechcity.in/resources/sez-benefits.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/pdf/state_policy_comparision.pdf,https://www.millionmindstechcity.in/resources/state-policy-comparison.pdf,migrate_file,Copy owned PDF before redirect and fix spelling in new URL
+https://www.millionmindstechcity.com/assets/pdf/technical-phase-01.pdf,https://www.millionmindstechcity.in/resources/m-one-technical-specifications.pdf,migrate_file,Copy owned PDF before redirect
+https://www.millionmindstechcity.com/assets/img/news/pdf/million_minds_tech_city.pdf,https://www.millionmindstechcity.in/resources/media/million-minds-tech-city-coverage.pdf,migrate_file,Copy owned media PDF before redirect
+https://www.millionmindstechcity.com/assets/img/news/pdf/mmtc_standalone_coverage_construction_world.pdf,https://www.millionmindstechcity.in/resources/media/construction-world-coverage.pdf,migrate_file,Copy owned media PDF before redirect
+https://www.millionmindstechcity.com/events/assets/pdf/gujarat-the-next-it-capital.pdf,https://www.millionmindstechcity.in/resources/gujarat-next-it-capital.pdf,migrate_file,Copy owned event PDF before redirect

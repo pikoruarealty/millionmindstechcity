@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
@@ -12,7 +12,7 @@ const devx = ['DevX corporate newsletter filed with NSE, 30 March 2026', 'https:
 const pages = [
   {
     route: '/million-minds-tech-city-address-location', title: 'Million Minds Tech City Address & Location | Ahmedabad',
-    desc: 'Find the verified Million Minds Tech City location in Ahmedabad, SG Highway and Vaishnodevi Circle context, nearby landmarks, map guidance and GIFT City corridor details.',
+    desc: 'Find Million Minds Tech City address in Ahmedabad, with SG Highway, Vaishnodevi Circle, nearby landmarks, map guidance and GIFT City corridor context.',
     eyebrow: 'Address & location', h1: 'Million Minds Tech City Address & Location, Ahmedabad',
     intro: 'Million Minds Tech City is located in Ahmedabad’s northern SG Highway growth corridor, behind Nirma University and near Vaishnodevi Circle. This page explains the verified public address and the wider Ahmedabad–Gandhinagar–GIFT City context without presenting the project as being inside GIFT City.',
     facts: [['Public address', 'Behind Nirma University, Off SG Highway, Ahmedabad, Gujarat – 382470'], ['Local context', 'Near Vaishnodevi Circle and Nirma University'], ['Regional corridor', 'Ahmedabad–Gandhinagar with access toward GIFT City']],
@@ -25,8 +25,8 @@ const pages = [
     related: ['/million-minds-tech-city-office-space', '/office-space-near-gift-city', '/office-space-vaishnodevi-circle-ahmedabad'], sources: [official]
   },
   {
-    route: '/million-minds-tech-city-companies', title: 'Companies at Million Minds Tech City | Ahmedabad Occupier Tracker',
-    desc: 'See publicly announced, reported and verified companies associated with Million Minds Tech City Ahmedabad, with status, dates and source-backed occupier updates.',
+    route: '/million-minds-tech-city-companies', title: 'Million Minds Tech City Companies | Occupier Tracker',
+    desc: 'See publicly reported companies associated with Million Minds Tech City Ahmedabad, with dated status labels, sources and careful occupier updates.',
     eyebrow: 'Occupier tracker', h1: 'Companies at Million Minds Tech City Ahmedabad',
     intro: 'Public announcements around Million Minds Tech City identify a mix of technology, IT services, consulting, biotechnology and managed-workspace companies associated with planned operations or leasing activity. The list below deliberately separates public reporting from confirmed operational status.',
     facts: [['Coverage rule', 'Only source-backed public names are listed'], ['Status language', 'Announced or reported does not automatically mean operational'], ['Last reviewed', '1 September 2026']],
@@ -42,7 +42,7 @@ const pages = [
     related: ['/m-one-million-minds-tech-city', '/million-minds-tech-city-office-space', '/blog/companies-in-million-minds-tech-city'], sources: [media, devx]
   },
   {
-    route: '/m-one-million-minds-tech-city', title: 'M One Ahmedabad | Million Minds Tech City Office & Specifications',
+    route: '/m-one-million-minds-tech-city', title: 'M One Ahmedabad | Office Tower & Specifications',
     desc: 'Explore M One at Million Minds Tech City Ahmedabad: floor plate, workplace specifications, SEZ context, enterprise suitability and office leasing information.',
     eyebrow: 'Phase 1 office tower', h1: 'M One at Million Minds Tech City Ahmedabad',
     intro: 'M One is the first major office-tower proposition highlighted within Million Minds Tech City. Public developer material positions it for IT, ITeS, GCC, enterprise, R&D and technology-led occupiers seeking large, flexible Grade A workplace formats in Ahmedabad.',
@@ -56,8 +56,8 @@ const pages = [
     related: ['/million-minds-tech-city-specifications', '/million-minds-tech-city-amenities', '/million-minds-tech-city-office-space'], sources: [official]
   },
   {
-    route: '/million-minds-tech-city-office-space', title: 'Million Minds Tech City Office Space | Ahmedabad Leasing Guide',
-    desc: 'Explore Grade-A office space at Million Minds Tech City Ahmedabad, including enterprise requirements, leasing options, location advantages and site-visit guidance.',
+    route: '/million-minds-tech-city-office-space', title: 'Million Minds Tech City Office Space | Leasing Guide',
+    desc: 'Explore office space at Million Minds Tech City Ahmedabad, including enterprise requirements, location, leasing checks and site-visit guidance.',
     eyebrow: 'Commercial leasing', h1: 'Office Space at Million Minds Tech City Ahmedabad',
     intro: 'Million Minds Tech City offers a large integrated workplace setting off SG Highway for technology, GCC, IT/ITeS, professional-services and enterprise teams. This page explains how to frame a requirement and what to verify before requesting a commercial proposal.',
     facts: [['Workplace formats', 'Large-floor and enterprise office requirements'], ['Location', 'Off SG Highway, behind Nirma University'], ['Availability', 'Confirm live inventory with the leasing team']],
@@ -70,7 +70,7 @@ const pages = [
     related: ['/m-one-million-minds-tech-city', '/million-minds-tech-city-specifications', '/office-space-sg-highway-ahmedabad'], sources: [official]
   },
   {
-    route: '/million-minds-tech-city-amenities', title: 'Million Minds Tech City Amenities | Work, Retail & Lifestyle',
+    route: '/million-minds-tech-city-amenities', title: 'Million Minds Tech City Amenities | Ahmedabad',
     desc: 'Review publicly described Million Minds Tech City amenities across workplace, wellness, food, mobility and business-support categories in Ahmedabad.',
     eyebrow: 'Workplace ecosystem', h1: 'Amenities at Million Minds Tech City',
     intro: 'The published amenity concept for Million Minds Tech City combines workplace support with food, wellness, mobility and community spaces. Prospective occupiers should distinguish between currently operational facilities, tower-specific provisions and future master-plan components.',
@@ -79,7 +79,7 @@ const pages = [
     faqs: [['Are all amenities operational today?', 'Not necessarily. Published concepts can include planned or phased components; confirm current delivery and access before making a decision.']], related: ['/m-one-million-minds-tech-city', '/million-minds-tech-city-specifications', '/million-minds-tech-city-office-space'], sources: [official]
   },
   {
-    route: '/million-minds-tech-city-specifications', title: 'Million Minds Tech City & M One Specifications | Ahmedabad',
+    route: '/million-minds-tech-city-specifications', title: 'Million Minds Tech City Specifications | M One',
     desc: 'Review source-backed Million Minds Tech City and M One specifications, including floor plates, building systems, sustainability and enterprise infrastructure.',
     eyebrow: 'Technical guide', h1: 'Million Minds Tech City & M One Specifications',
     intro: 'Public project information highlights large floor plates, high floor-to-floor dimensions, backup power, efficient cooling and smart-building features. This guide records the published headline specifications while identifying the documents an occupier should request before commitment.',
@@ -97,8 +97,8 @@ const pages = [
     faqs: [['Is this the official developer website?', 'No. This is an independent information and leasing-assistance website. The developer’s project information is available through Ganesh Housing and the official .com project domain.']], related: ['/about', '/sources-methodology', '/million-minds-tech-city-office-space'], sources: [official, ['Ganesh Housing company website', 'https://ganeshhousing.com/']]
   },
   {
-    route: '/million-minds-tech-city-sez', title: 'Million Minds Tech City SEZ | Ahmedabad IT/ITeS SEZ Guide',
-    desc: 'Understand the IT/ITeS SEZ context of Million Minds Tech City Ahmedabad, policy references, enterprise relevance and what businesses should verify before leasing.',
+    route: '/million-minds-tech-city-sez', title: 'Million Minds Tech City SEZ | Ahmedabad Guide',
+    desc: 'Understand the IT/ITeS SEZ context of Million Minds Tech City Ahmedabad, enterprise relevance and what businesses should verify before leasing.',
     eyebrow: 'Policy context', h1: 'Million Minds Tech City SEZ Explained',
     intro: 'Developer and corporate material describes Million Minds Tech City in an IT/ITeS SEZ context. SEZ suitability is company-specific and can affect unit approval, authorised operations, customs, taxation, compliance and exit planning, so professional advice is essential.',
     facts: [['Published context', 'IT/ITeS Special Economic Zone'], ['Decision rule', 'Verify the exact building and unit status'], ['Advice', 'Use legal, tax and SEZ specialists before commitment']],
@@ -107,7 +107,7 @@ const pages = [
   },
   {
     route: '/gcc-office-space-ahmedabad', title: 'GCC Office Space in Ahmedabad | Enterprise Location Guide',
-    desc: 'Compare office-location factors for Global Capability Centres in Ahmedabad, including SG Highway, GIFT City corridor access, Grade-A infrastructure and scalability.',
+    desc: 'Compare Ahmedabad office-location factors for Global Capability Centres, including SG Highway, GIFT City corridor access, infrastructure and scalability.',
     eyebrow: 'Enterprise location strategy', h1: 'GCC Office Space in Ahmedabad',
     intro: 'Ahmedabad is attracting greater attention from Global Capability Centres assessing cost, talent, resilience and access to Gujarat’s business ecosystem. A GCC office decision should balance real-estate economics with recruitment, technology, compliance and employee experience.',
     facts: [['Primary users', 'GCC, technology and enterprise teams'], ['Core test', 'Talent, resilience, compliance and scalable space'], ['Project context', 'Million Minds Tech City is positioned for GCC demand']],
@@ -124,7 +124,7 @@ const pages = [
     faqs: [['Is Million Minds Tech City at Vaishnodevi Circle?', 'It is described as behind Nirma University and off SG Highway, near the Vaishnodevi Circle corridor; use the verified visitor pin for exact navigation.']], related: ['/million-minds-tech-city-address-location', '/office-space-sg-highway-ahmedabad', '/localities/s-g-highway-ahmedabad'], sources: [official]
   },
   {
-    route: '/office-space-sg-highway-ahmedabad', title: 'Office Space on SG Highway Ahmedabad | Million Minds Tech City',
+    route: '/office-space-sg-highway-ahmedabad', title: 'SG Highway Ahmedabad Office Space | Leasing Guide',
     desc: 'Explore office space on SG Highway Ahmedabad, with Grade-A workplace considerations, corridor advantages and Million Minds Tech City leasing information.',
     eyebrow: 'SG Highway commercial offices', h1: 'Office Space on S.G. Highway, Ahmedabad',
     intro: 'SG Highway is one of Ahmedabad’s best-known commercial corridors, linking established western business districts with northern growth areas and Gandhinagar. Million Minds Tech City adds a large technology-focused office proposition off this corridor.',
@@ -236,6 +236,24 @@ const trustPages = [
 
 for (const [route, title, desc, h1, intro, sections, related] of trustPages) pages.push({ route, title, desc, eyebrow: 'Transparency', h1, intro, facts: [['Operator', 'PIKORUA Realty'], ['Website status', 'Independent information and leasing assistance'], ['Updated', '1 September 2026']], sections, faqs: [], related, sources: [] });
 
+const expansionPages = JSON.parse(await readFile(path.join(ROOT, 'seo/expansion-pages.json'), 'utf8'));
+pages.push(...expansionPages);
+
+const seoOverrides = {
+  '/million-minds-tech-city-companies': { updated: '2026-09-12' },
+  '/m-one-million-minds-tech-city': { updated: '2026-09-12' },
+  '/million-minds-tech-city-office-space': { updated: '2026-09-12' },
+  '/million-minds-tech-city-amenities': { updated: '2026-09-12' },
+  '/million-minds-tech-city-specifications': { updated: '2026-09-12' },
+  '/million-minds-tech-city-sez': { updated: '2026-09-12' },
+  '/gcc-office-space-ahmedabad': { updated: '2026-09-12' },
+  '/office-space-sg-highway-ahmedabad': { updated: '2026-09-12' },
+  '/blog/who-developed-million-minds-tech-city': { title: 'Who Developed Million Minds Tech City? | Project Guide', updated: '2026-09-12' },
+  '/disclaimer': { title: 'Independent Website Disclaimer | Million Minds', updated: '2026-09-12' },
+  '/terms': { desc: 'Read the terms governing this independent Million Minds Tech City information and leasing-assistance website, including important limitations.', updated: '2026-09-12' }
+};
+for (const page of pages) Object.assign(page, seoOverrides[page.route] || {});
+
 const labels = Object.fromEntries(pages.map(p => [p.route, p.h1]));
 Object.assign(labels, { '/': 'Million Minds Tech City Ahmedabad', '/blog': 'Research & Guides' });
 
@@ -244,12 +262,15 @@ function fileFor(route) { if (route === '/blog') return 'blog/index.html'; retur
 function prefixFor(file) { return file.includes('/') ? '..' : '.'; }
 function renderLinks(routes) { return routes.map(route => '<a class="related-card" href="' + route + '"><small>Explore</small><strong>' + esc(labels[route] || route) + '</strong></a>').join(''); }
 function renderPage(p) {
-  const file = fileFor(p.route); const prefix = prefixFor(file); const url = ORIGIN + p.route; const image = ORIGIN + '/images/08_rockefeller-center.jpg';
+  const file = fileFor(p.route); const prefix = prefixFor(file); const url = ORIGIN + p.route; const image = p.image || ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg';
+  const pageUpdated = p.updated || UPDATED;
+  const updatedLabel = new Date(pageUpdated + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   const crumbs = [{ name: 'Home', item: ORIGIN + '/' }, ...(p.article ? [{ name: 'Blog', item: ORIGIN + '/blog' }] : []), { name: p.h1, item: url }];
   const projectRef = { '@id': ORIGIN + '/#million-minds-tech-city' };
-  const pageSchema = p.article ? { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.h1, description: p.desc, datePublished: UPDATED, dateModified: UPDATED, author: { '@id': ORIGIN + '/#operator' }, publisher: { '@id': ORIGIN + '/#operator' }, mainEntityOfPage: url, image: { '@id': ORIGIN + '/#primary-image' }, about: projectRef } : { '@context': 'https://schema.org', '@type': p.route === '/about' ? 'AboutPage' : 'WebPage', name: p.h1, description: p.desc, url, dateModified: UPDATED, isPartOf: { '@id': ORIGIN + '/#website' }, about: projectRef, mentions: [{ '@type': 'Organization', name: 'Ganesh Housing Limited', url: 'https://ganeshhousing.com/' }] };
-  const identitySchema = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', '@id': ORIGIN + '/#website', name: 'Million Minds Tech City Ahmedabad - Independent Information', url: ORIGIN + '/', publisher: { '@id': ORIGIN + '/#operator' } }, { '@type': 'Organization', '@id': ORIGIN + '/#operator', name: 'PIKORUA Realty', url: ORIGIN + '/', description: 'Independent real-estate information and enquiry-assistance website operator.' }, { '@type': 'Place', '@id': ORIGIN + '/#million-minds-tech-city', name: 'Million Minds Tech City', url: 'https://www.millionmindstechcity.com/', description: 'Integrated technology and business development in Ahmedabad.', address: { '@type': 'PostalAddress', streetAddress: 'Behind Nirma University, Off SG Highway', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' } }, { '@type': 'ImageObject', '@id': ORIGIN + '/#primary-image', contentUrl: image, caption: 'Million Minds Tech City Ahmedabad project imagery' }] };
+  const pageSchema = p.article ? { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.h1, description: p.desc, datePublished: pageUpdated, dateModified: pageUpdated, author: { '@id': ORIGIN + '/#operator' }, publisher: { '@id': ORIGIN + '/#operator' }, mainEntityOfPage: url, image: { '@id': ORIGIN + '/#primary-image' }, about: projectRef } : { '@context': 'https://schema.org', '@type': p.route === '/about' ? 'AboutPage' : 'WebPage', name: p.h1, description: p.desc, url, dateModified: pageUpdated, isPartOf: { '@id': ORIGIN + '/#website' }, about: projectRef, mentions: [{ '@type': 'Organization', name: 'Ganesh Housing Limited', url: 'https://ganeshhousing.com/' }] };
+  const identitySchema = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', '@id': ORIGIN + '/#website', name: 'Million Minds Tech City Ahmedabad - Independent Information', url: ORIGIN + '/', publisher: { '@id': ORIGIN + '/#operator' } }, { '@type': 'Organization', '@id': ORIGIN + '/#operator', name: 'PIKORUA Realty', url: ORIGIN + '/', description: 'Independent real-estate information and enquiry-assistance website operator.' }, { '@type': 'Place', '@id': ORIGIN + '/#million-minds-tech-city', name: 'Million Minds Tech City', url: 'https://www.millionmindstechcity.com/', description: 'Integrated technology and business development in Ahmedabad.', address: { '@type': 'PostalAddress', streetAddress: 'Behind Nirma University, Off SG Highway', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' } }, { '@type': 'ImageObject', '@id': ORIGIN + '/#primary-image', contentUrl: image, caption: 'Million Minds Tech City Ahmedabad independent guide branding' }] };
   const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })) };
+  const faqSchema = p.faqs?.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: p.faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) } : null;
   const facts = p.facts.map(([a,b]) => '<div class="fact"><strong>' + esc(a) + '</strong><span>' + esc(b) + '</span></div>').join('');
   const table = p.table ? '<div class="table-wrap"><table><thead><tr>' + p.table.headers.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' + p.table.rows.map(row => '<tr>' + row.map(x => '<td>' + esc(x) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>' : '';
   const sections = p.sections.map(([h, paras]) => {
@@ -257,15 +278,16 @@ function renderPage(p) {
     return '<section class="article-section"><h2>' + esc(h) + '</h2>' + paragraphs.map(x => '<p>' + esc(x) + '</p>').join('') + '</section>';
   }).join('');
   const faq = p.faqs?.length ? '<section class="faq"><div class="shell faq-grid"><div><span class="section-label">Questions answered</span><h2>Frequently asked questions</h2></div><div class="faq-list">' + p.faqs.map(([q,a], i) => '<details' + (i === 0 ? ' open' : '') + '><summary>' + esc(q) + '</summary><p>' + esc(a) + '</p></details>').join('') + '</div></div></section>' : '';
-  const sources = p.sources?.length ? '<section class="article-section sources"><h2>Sources</h2><ol>' + p.sources.map(([name, href]) => '<li><a data-source href="' + esc(href) + '" rel="noopener noreferrer">' + esc(name) + '</a></li>').join('') + '</ol><p>Source access and page review date: 1 September 2026.</p></section>' : '';
+  const sources = p.sources?.length ? '<section class="article-section sources"><h2>Sources</h2><ol>' + p.sources.map(([name, href]) => '<li><a data-source href="' + esc(href) + '" rel="noopener noreferrer">' + esc(name) + '</a></li>').join('') + '</ol><p>Source access and page review date: ' + esc(updatedLabel) + '.</p></section>' : '';
+  const authorNote = '<aside class="author-note" aria-label="Editorial review"><strong>Reviewed by ' + esc(OPERATOR) + '</strong><p>Independent commercial-property research and leasing assistance. Material project claims are checked against the sources listed on this page. <a href="/sources-methodology">Read our sourcing method</a> or <a href="/contact">submit a correction</a>.</p></aside>';
   return '<!doctype html>\n<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d1b2e">\n' +
     '<title>' + esc(p.title) + '</title><meta name="description" content="' + esc(p.desc) + '"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="' + url + '">\n' +
     '<meta property="og:type" content="' + (p.article ? 'article' : 'website') + '"><meta property="og:title" content="' + esc(p.title) + '"><meta property="og:description" content="' + esc(p.desc) + '"><meta property="og:url" content="' + url + '"><meta property="og:image" content="' + image + '"><meta property="og:site_name" content="Million Minds Tech City Ahmedabad - Independent Information">\n' +
     '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="' + esc(p.title) + '"><meta name="twitter:description" content="' + esc(p.desc) + '"><meta name="twitter:image" content="' + image + '"><link rel="stylesheet" href="' + prefix + '/styles/landing-pages.css">\n' +
-    '<script type="application/ld+json">' + JSON.stringify(identitySchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(pageSchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') + '</script></head><body>\n' +
+    '<script type="application/ld+json">' + JSON.stringify(identitySchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(pageSchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') + '</script>' + (faqSchema ? '<script type="application/ld+json">' + JSON.stringify(faqSchema).replace(/</g, '\\u003c') + '</script>' : '') + '</head><body>\n' +
     '<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/">Million <span>Minds</span></a><div class="nav-links"><a href="/million-minds-tech-city-address-location">Location</a><a href="/million-minds-tech-city-companies">Companies</a><a href="/m-one-million-minds-tech-city">M One</a><a href="/blog">Guides</a><a href="/#contact">Enquire</a></div></nav></header>\n' +
     '<main><section class="hero article-hero" style="background-image:url(\'' + prefix + '/images/08_rockefeller-center.jpg\')"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a>' + (p.article ? '<span>/</span><a href="/blog">Blog</a>' : '') + '<span>/</span><span aria-current="page">' + esc(p.h1) + '</span></nav><span class="eyebrow">' + esc(p.eyebrow) + '</span><h1>' + esc(p.h1) + '</h1><p class="hero-copy">' + esc(p.intro) + '</p></div></section>\n' +
-    '<article class="article shell"><div class="article-meta">By ' + esc(OPERATOR) + ' · Updated <time datetime="' + UPDATED + '">1 September 2026</time></div><div class="facts">' + facts + '</div>' + table + sections + sources + '</article>' + faq +
+    '<article class="article shell"><div class="article-meta">By ' + esc(OPERATOR) + ' · Updated <time datetime="' + pageUpdated + '">' + esc(updatedLabel) + '</time></div><div class="facts">' + facts + '</div>' + table + sections + sources + authorNote + '</article>' + faq +
     '<section class="related"><div class="shell"><span class="section-label">Related pages</span><h2>Continue your research</h2><div class="related-grid">' + renderLinks(p.related) + '</div></div></section><section class="cta"><div class="shell"><h2>Discuss an office requirement</h2><p>Share your team size, target area, timing and technical needs for a current leasing conversation.</p><a class="button" href="/#contact">Request a Consultation</a></div></section></main>\n' +
     '<footer class="site-footer"><div class="shell"><div class="footer-row"><span>Independent information & leasing assistance by PIKORUA Realty</span><a href="/disclaimer">Disclaimer</a></div><p class="footer-disclaimer">This website is an independent real-estate information and enquiry-assistance platform and is not the official website of Ganesh Housing Limited or Million Minds Tech City, unless expressly stated otherwise. Project information is compiled from publicly available sources and should be independently verified before a leasing or investment decision.</p><nav class="legal-links" aria-label="Legal"><a href="/about">About</a><a href="/editorial-policy">Editorial policy</a><a href="/sources-methodology">Sources</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav></div></footer></body></html>\n';
 }
@@ -283,11 +305,16 @@ for (const [oldRoute, newRoute] of Object.entries(legacyRedirects)) {
   await writeFile(target, redirectHtml, 'utf8');
 }
 
-const blogCards = guides.map(([route, title, desc]) => '<article class="blog-card"><span>Guide · Updated 1 Sep 2026</span><h2><a href="' + route + '">' + esc(title) + '</a></h2><p>' + esc(desc) + '</p><a class="text-link" href="' + route + '">Read guide →</a></article>').join('');
+const blogCards = pages.filter(page => page.article).map(page => '<article class="blog-card"><span>Guide · Updated ' + esc(page.updated || UPDATED) + '</span><h2><a href="' + page.route + '">' + esc(page.title) + '</a></h2><p>' + esc(page.desc) + '</p><a class="text-link" href="' + page.route + '">Read guide →</a></article>').join('');
 const blogIndexSchema = { '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: 'Million Minds Tech City Insights', url: ORIGIN + '/blog', description: 'Source-backed Million Minds Tech City and Ahmedabad office insights.', about: { '@id': ORIGIN + '/#million-minds-tech-city' } }, { '@type': 'Organization', '@id': ORIGIN + '/#operator', name: 'PIKORUA Realty', url: ORIGIN + '/' }, { '@type': 'Place', '@id': ORIGIN + '/#million-minds-tech-city', name: 'Million Minds Tech City', url: 'https://www.millionmindstechcity.com/' }] };
 const blogIndex = '<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Million Minds Tech City Blog | Ahmedabad Office & GCC Insights</title><meta name="description" content="Read source-backed guides on Million Minds Tech City, M One, SG Highway, Ahmedabad office leasing, IT/ITeS SEZs, GCC location strategy and project updates."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="' + ORIGIN + '/blog"><meta property="og:type" content="website"><meta property="og:title" content="Million Minds Tech City Blog | Ahmedabad Office & GCC Insights"><meta property="og:description" content="Source-backed Million Minds Tech City and Ahmedabad office insights."><meta property="og:url" content="' + ORIGIN + '/blog"><meta property="og:image" content="' + ORIGIN + '/images/08_rockefeller-center.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Million Minds Tech City Blog | Ahmedabad Office & GCC Insights"><meta name="twitter:description" content="Source-backed Million Minds Tech City and Ahmedabad office insights."><link rel="stylesheet" href="../styles/landing-pages.css"><script type="application/ld+json">' + JSON.stringify(blogIndexSchema) + '</script></head><body><header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/">Million <span>Minds</span></a><div class="nav-links"><a href="/million-minds-tech-city-address-location">Location</a><a href="/million-minds-tech-city-companies">Companies</a><a href="/m-one-million-minds-tech-city">M One</a><a href="/#contact">Enquire</a></div></nav></header><main><section class="hero article-hero" style="background-image:url(\'../images/09_rsp.jpg\')"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Blog</span></nav><span class="eyebrow">Independent research</span><h1>Million Minds Tech City Insights</h1><p class="hero-copy">Source-backed guides for businesses evaluating Million Minds Tech City, M One, SG Highway, GCC locations, IT/ITeS infrastructure and Ahmedabad office decisions.</p></div></section><section class="blog-index shell">' + blogCards + '</section></main><footer class="site-footer"><div class="shell"><div class="footer-row"><span>Independent information & leasing assistance by PIKORUA Realty</span><a href="/disclaimer">Disclaimer</a></div><p class="footer-disclaimer">Not the official developer website. Verify project and commercial information independently.</p></div></footer></body></html>';
+const blogListSchema = { '@context': 'https://schema.org', '@graph': [{ '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: ORIGIN + '/' }, { '@type': 'ListItem', position: 2, name: 'Research & Guides', item: ORIGIN + '/blog' }] }, { '@type': 'ItemList', name: 'Million Minds Tech City research guides', numberOfItems: pages.filter(page => page.article).length, itemListElement: pages.filter(page => page.article).map((page, index) => ({ '@type': 'ListItem', position: index + 1, name: page.h1, url: ORIGIN + page.route })) }] };
+const enhancedBlogIndex = blogIndex
+  .replaceAll('Million Minds Tech City Blog | Ahmedabad Office & GCC Insights', 'Million Minds Tech City Blog | Ahmedabad Offices')
+  .replaceAll(ORIGIN + '/images/08_rockefeller-center.jpg', ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg')
+  .replace('</head>', '<meta name="twitter:image" content="' + ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg"><script type="application/ld+json">' + JSON.stringify(blogListSchema).replace(/</g, '\\u003c') + '</script></head>');
 await mkdir(path.join(ROOT, 'blog'), { recursive: true });
-await writeFile(path.join(ROOT, 'blog/index.html'), blogIndex, 'utf8');
+await writeFile(path.join(ROOT, 'blog/index.html'), enhancedBlogIndex, 'utf8');
 
 const notFound = '<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page Not Found | Million Minds Tech City Guide</title><meta name="robots" content="noindex, follow"><link rel="stylesheet" href="./styles/landing-pages.css"></head><body><main class="not-found shell"><span class="eyebrow">404</span><h1>That page could not be found.</h1><p>Use the project guide, location pages or research hub to continue.</p><p><a class="button" href="/">Return home</a> <a class="text-link" href="/blog">Browse guides</a></p></main></body></html>';
 await writeFile(path.join(ROOT, '404.html'), notFound, 'utf8');
@@ -317,12 +344,46 @@ function metadataRecord(route, title, description, h1, article = false) {
   return { slug: route, canonical_url: ORIGIN + (route === '/' ? '/' : route), title, meta_description: description, h1, primary_keyword: strategy[0], secondary_keywords: strategy[1], search_intent: strategy[2], priority: strategy[3], last_modified: UPDATED, og_title: title, og_description: description, og_image: ORIGIN + '/images/08_rockefeller-center.jpg', schema_types: article ? ['WebSite', 'Organization', 'Place', 'BlogPosting', 'BreadcrumbList', 'ImageObject'] : ['WebSite', 'Organization', 'Place', route === '/about' ? 'AboutPage' : 'WebPage', 'BreadcrumbList', 'ImageObject'] };
 }
 const metadata = {
-  '/': metadataRecord('/', 'Million Minds Tech City Ahmedabad | Offices, M One & Location', 'Explore Million Minds Tech City Ahmedabad: location, M One, Grade-A office space, developer details, companies, specifications and leasing information.', 'Million Minds Tech City Ahmedabad'),
-  '/blog': metadataRecord('/blog', 'Million Minds Tech City Blog | Ahmedabad Office & GCC Insights', 'Read source-backed guides on Million Minds Tech City, M One, SG Highway, Ahmedabad office leasing, IT/ITeS SEZs, GCC location strategy and project updates.', 'Million Minds Tech City Insights')
+  '/': { ...metadataRecord('/', 'Million Minds Tech City Ahmedabad | Office Space & M One', 'Independent guide to Million Minds Tech City Ahmedabad: M One offices, SG Highway location, specifications, companies, SEZ context and leasing enquiries.', 'Million Minds Tech City Ahmedabad'), last_modified: '2026-09-12', og_image: ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg' },
+  '/blog': { ...metadataRecord('/blog', 'Million Minds Tech City Blog | Ahmedabad Offices', 'Read source-backed guides on Million Minds Tech City, M One, SG Highway, Ahmedabad office leasing, IT/ITeS SEZs, GCC location strategy and project updates.', 'Million Minds Tech City Insights'), last_modified: '2026-09-12', og_image: ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg', schema_types: ['CollectionPage', 'Organization', 'Place', 'BreadcrumbList', 'ItemList'] }
 };
-for (const p of pages) metadata[p.route] = metadataRecord(p.route, p.title, p.desc, p.h1, Boolean(p.article));
+for (const p of pages) {
+  metadata[p.route] = metadataRecord(p.route, p.title, p.desc, p.h1, Boolean(p.article));
+  if (p.faqs?.length) metadata[p.route].schema_types.push('FAQPage');
+}
+for (const p of pages) {
+  if (!p.primary_keyword) continue;
+  Object.assign(metadata[p.route], {
+    primary_keyword: p.primary_keyword,
+    secondary_keywords: p.secondary_keywords || [],
+    search_intent: p.search_intent || (p.article ? 'editorial/informational' : 'informational'),
+    priority: p.priority || 'P2',
+    last_modified: p.updated || UPDATED,
+    og_image: p.image || ORIGIN + '/images/og/million-minds-tech-city-ahmedabad.jpg'
+  });
+}
 await writeFile(path.join(ROOT, 'seo/metadata.json'), JSON.stringify(metadata, null, 2) + '\n', 'utf8');
+const keywordRows = Object.values(metadata).map(item => ({
+  priority: item.priority,
+  route: item.slug,
+  primary: item.primary_keyword,
+  secondary: item.secondary_keywords.join(' | '),
+  intent: item.search_intent,
+  title: item.title
+})).sort((a, b) => a.priority.localeCompare(b.priority) || a.route.localeCompare(b.route));
+const csvCell = value => '"' + String(value).replace(/"/g, '""') + '"';
+const keywordCsv = ['priority,route,primary_keyword,secondary_keywords,search_intent,title', ...keywordRows.map(row => [row.priority, row.route, row.primary, row.secondary, row.intent, row.title].map(csvCell).join(','))].join('\n') + '\n';
+await writeFile(path.join(ROOT, 'seo/keyword-map.csv'), keywordCsv, 'utf8');
+const keywordMarkdown = '# Million Minds Tech City .in — Keyword & Page Map (58 indexable pages)\n\n' +
+  'Updated: 12 September 2026  \nPrimary domain: `https://www.millionmindstechcity.in`  \nStrategy: one useful page per distinct search intent; no duplicate city-name or keyword-swapped doorway pages.\n\n' +
+  '## How to use this map\n\nEach primary keyword has one owning URL. Secondary phrases are semantic variations to answer naturally, not a repetition target. Review Search Console queries and conversions monthly; consolidate pages if Google consistently treats two URLs as the same intent. Rankings are not guaranteed and depend on indexing, authority, links, competition, user response and technical quality.\n\n' +
+  '## Route ownership\n\n| Priority | Index URL | Primary keyword | Secondary keyword cluster | Intent |\n|---|---|---|---|---|\n' +
+  keywordRows.map(row => '| ' + [row.priority, '`' + row.route + '`', row.primary, row.secondary.replace(/\|/g, '·'), row.intent].map(value => String(value).replace(/\|/g, '\\|')).join(' | ') + ' |').join('\n') +
+  '\n\n## Content governance\n\n- Keep the verified project location as “Behind Nirma University, Off SG Highway, Ahmedabad”; locality pages describe commute or shortlist context and must not invent alternate addresses.\n- Publish live rates, inventory, delivery, certification and occupancy only with a dated primary source or written project confirmation.\n- Keep visible FAQs aligned with `FAQPage` JSON-LD. Structured data can aid understanding but does not guarantee rich results.\n- Update pages when material facts change; do not change dates without a substantive review.\n- The `.com` and `.in` domains should not compete with duplicate indexable content. Consolidate authority to `.in` using server-side redirects and matching canonicals when deployment access permits.\n';
+const researchNotes = '\n## Research basis\n\nGoogle recommends substantial, people-first content rather than pages created mainly to capture search traffic.[^1] Its spam policy specifically warns against substantially similar location or query pages that funnel visitors to the same destination.[^2] The expansion therefore uses a limited set of distinct decision intents instead of dozens of keyword-swapped pages. Google also requires structured data to represent visible page content and does not guarantee a rich result; each FAQ schema block mirrors the visible FAQ section.[^3] Project-location wording is anchored to current developer information.[^4]\n\n## Sources\n\n[^1]: [Google Search Central — Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), reviewed 12 September 2026.\n[^2]: [Google Search Central — Spam policies: doorway abuse and scaled content abuse](https://developers.google.com/search/docs/essentials/spam-policies), reviewed 12 September 2026.\n[^3]: [Google Search Central — General structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies), reviewed 12 September 2026.\n[^4]: [Ganesh Housing — Million Minds Tech City project information](https://ganeshhousing.com/millionmindstechcity), reviewed 12 September 2026.\n';
+await writeFile(path.join(ROOT, 'SEO_KEYWORD_MAP_58_PAGES_2026.md'), keywordMarkdown + researchNotes, 'utf8');
 const sitemapRoutes = ['/', '/blog', ...pages.map(p => p.route)];
-const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemapRoutes.map(route => '  <url><loc>' + ORIGIN + (route === '/' ? '/' : route) + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('\n') + '\n</urlset>\n';
+const pageUpdatedByRoute = Object.fromEntries(pages.map(page => [page.route, page.updated || UPDATED]));
+const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemapRoutes.map(route => '  <url><loc>' + ORIGIN + (route === '/' ? '/' : route) + '</loc><lastmod>' + (route === '/' ? '2026-09-12' : pageUpdatedByRoute[route] || UPDATED) + '</lastmod></url>').join('\n') + '\n</urlset>\n';
 await writeFile(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
 console.log('[generate-seo-pages] generated ' + (pages.length + 2) + ' crawlable pages');

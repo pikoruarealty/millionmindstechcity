@@ -190,6 +190,26 @@ function applyMetaDescription(html, description) {
   );
 }
 
+const BRAND_ICON_MARKER = "<!-- BRAND ICONS -->";
+const BRAND_ICON_TAGS = `${BRAND_ICON_MARKER}
+<link rel="icon" href="/favicon.ico" sizes="32x32 192x192">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/brand/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/brand/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">`;
+
+/** Keep the brand favicon on hand-authored and generated pages alike. */
+function applyBrandIcons(html) {
+  if (html.includes(BRAND_ICON_MARKER)) {
+    return html.replace(
+      /<!-- BRAND ICONS -->[\s\S]*?<link rel="manifest" href="\/site\.webmanifest">/,
+      BRAND_ICON_TAGS,
+    );
+  }
+  if (!/<\/head>/i.test(html)) return html;
+  return html.replace(/<\/head>/i, `${BRAND_ICON_TAGS}\n</head>`);
+}
+
 // Schema.org types that must appear at most once per page. Google's Rich
 // Results treats a second block of one of these as a conflict and can ignore
 // the whole set, so when the approved manifest supplies one we drop any
@@ -264,6 +284,7 @@ async function applyToFile(filePath, route, metadataForRoute, manifestPage) {
   if (metadataForRoute?.title) updated = applyTitle(updated, metadataForRoute.title);
   if (metadataForRoute?.meta_description) updated = applyMetaDescription(updated, metadataForRoute.meta_description);
   if (manifestPage?.json_ld) updated = appendSchema(updated, manifestPage.json_ld);
+  updated = applyBrandIcons(updated);
   if (updated !== html) {
     await writeFile(filePath, updated, "utf8");
     console.log(`[apply-seo] updated ${path.relative(ROOT, filePath)} (route ${route})`);

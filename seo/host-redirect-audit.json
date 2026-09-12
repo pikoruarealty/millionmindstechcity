@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-09-12T08:38:41+05:30",
+  "preferred_origin": "https://www.millionmindstechcity.in",
+  "tests": [
+    {
+      "url": "http://millionmindstechcity.in/",
+      "result": "200 OK",
+      "final_url": "http://millionmindstechcity.in/",
+      "finding": "No HTTP redirect; serves a 114-byte JavaScript lander pointing to /lander"
+    },
+    {
+      "url": "https://millionmindstechcity.in/",
+      "result": "TLS handshake failed",
+      "final_url": null,
+      "finding": "Apex HTTPS was unavailable from the audit client"
+    },
+    {
+      "url": "http://www.millionmindstechcity.in/",
+      "result": "200 after one redirect",
+      "final_url": "https://www.millionmindstechcity.in/",
+      "finding": "Correct one-hop protocol redirect"
+    },
+    {
+      "url": "https://www.millionmindstechcity.in/index.html",
+      "result": "200 after one redirect",
+      "final_url": "https://www.millionmindstechcity.in/",
+      "finding": "Correct clean-URL redirect"
+    }
+  ],
+  "dns_observed": {
+    "millionmindstechcity.in_A": [
+      "15.197.148.33",
+      "3.33.130.190",
+      "216.198.79.1"
+    ],
+    "www.millionmindstechcity.in_CNAME": "6b681eebdd265337.vercel-dns-017.com",
+    "millionmindstechcity.com_A": [
+      "162.241.123.60"
+    ],
+    "www.millionmindstechcity.com_CNAME": "millionmindstechcity.com"
+  }
+}

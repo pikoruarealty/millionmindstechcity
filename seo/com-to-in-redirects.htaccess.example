@@ -1,0 +1,24 @@
+# Install on the millionmindstechcity.com Apache origin only after the matching
+# .in destinations have been deployed and tested. Keep redirects indefinitely.
+RewriteEngine On
+
+RedirectMatch 301 ^/$ https://www.millionmindstechcity.in/
+RedirectMatch 301 ^/aboutus\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-developer
+RedirectMatch 301 ^/blog\.html$ https://www.millionmindstechcity.in/blog
+RedirectMatch 301 ^/commercial-project-near-sg-highway-gift-city\.html$ https://www.millionmindstechcity.in/office-space-near-gift-city
+RedirectMatch 301 ^/contactus\.html$ https://www.millionmindstechcity.in/contact
+RedirectMatch 301 ^/faq\.html$ https://www.millionmindstechcity.in/#faq
+RedirectMatch 301 ^/grade-a-office-space-ahmedabad-future-workplace\.html$ https://www.millionmindstechcity.in/blog/what-makes-grade-a-office-building
+RedirectMatch 301 ^/key-highlights\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-amenities
+RedirectMatch 301 ^/lifestyle\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-amenities
+RedirectMatch 301 ^/masterplan\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-specifications
+RedirectMatch 301 ^/media-center\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-news
+RedirectMatch 301 ^/million-minds-tech-city-launch\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-news
+RedirectMatch 301 ^/million-minds-tech-city-premier-office-spaces-ahmedabad\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-office-space
+RedirectMatch 301 ^/phase1\.html$ https://www.millionmindstechcity.in/m-one-million-minds-tech-city
+RedirectMatch 301 ^/redefining-office-leasing-in-ahmedabad\.html$ https://www.millionmindstechcity.in/million-minds-tech-city-office-space
+RedirectMatch 301 ^/assets/pdf/privacy_policy\.pdf$ https://www.millionmindstechcity.in/privacy-policy
+
+# Do not add a blanket redirect to the .in homepage. Migrate the remaining
+# event and PDF destinations from domain-consolidation-map.csv first, then add
+# one-to-one permanent redirects for them.

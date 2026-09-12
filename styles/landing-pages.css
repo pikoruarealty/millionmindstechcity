@@ -56,6 +56,10 @@ h2 { margin: 0; font-size: clamp(1.85rem, 3.5vw, 3rem); line-height: 1.15; lette
 .sources ol { padding-left: 22px; }
 .sources li { margin: 10px 0; }
 .sources a, .text-link { color: #16755f; font-weight: 700; }
+.author-note { margin-top: 34px; padding: 24px 26px; border: 1px solid var(--line); border-left: 4px solid var(--accent); background: var(--surface); }
+.author-note strong { display: block; color: var(--ink); }
+.author-note p { margin: 8px 0 0; color: var(--ink-soft); }
+.author-note a { color: #16755f; font-weight: 700; }
 .table-wrap { margin: 10px 0 52px; overflow-x: auto; border: 1px solid var(--line); }
 table { width: 100%; border-collapse: collapse; min-width: 720px; }
 th, td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }

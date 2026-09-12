@@ -1,5 +1,6 @@
 import {
   clientIp,
+  enforceSameOrigin,
   enforceRateLimit,
   getConfig,
   json,
@@ -14,8 +15,9 @@ export default {
   async fetch(request) {
     if (request.method !== "POST") return json({ error: "Method not allowed." }, 405, { Allow: "POST" });
     try {
+      enforceSameOrigin(request);
       const input = await readJson(request);
-      const config = getConfig();
+      const config = getConfig({ requireDatabase: true });
       enforceRateLimit(`verify-ip:${clientIp(request)}`, 12, 15 * 60_000);
       enforceRateLimit(`verify-token:${String(input.challenge || "").slice(-32)}`, 5, 10 * 60_000);
       const verifiedLead = await verifyOtpChallenge(input.challenge, input.otp, config);
