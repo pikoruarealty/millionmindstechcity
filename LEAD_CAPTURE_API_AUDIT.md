@@ -1,6 +1,6 @@
 # Lead Capture API Audit
 
-Updated: 12 September 2026
+Updated: 13 September 2026
 
 ## Current result
 
@@ -12,10 +12,12 @@ Updated: 12 September 2026
 | Local environment-variable presence | All required variable names have non-empty local values; values were not printed |
 | Local Brevo credential | Authenticated successfully with a read-only account request |
 | Local Supabase URL | Valid HTTPS and hosted-domain format, but DNS lookup returns `ENOTFOUND` |
-| Mocked end-to-end integration test | Passed |
+| Mocked end-to-end integration test | Passed; now covers 2Factor rejection and Supabase-outage OTP guard |
 | Real OTP delivery | Not triggered; requires an owner-approved controlled Indian phone number |
 
 The failed production test was labelled `API Health Check` and returned 500 before a successful capture response. Under the deployed implementation, an email failure after a successful database save would not return 500, so the failure points to production configuration or Supabase storage connectivity rather than the contact-form JavaScript.
+
+The local Supabase hostname does not resolve. The OTP handler saves its challenge to Supabase before calling 2Factor, so this local configuration cannot send an OTP. Production configuration could differ; without access to the Vercel environment and function logs, the exact live failure cannot be confirmed. A successful provider response also does not prove handset delivery, which needs a controlled phone test.
 
 ## Fixes implemented locally
 
@@ -28,6 +30,7 @@ The failed production test was labelled `API Health Check` and returned 500 befo
 - Added a “Continue browsing” option only after OTP API failure so an infrastructure outage cannot permanently lock visitors out of the site.
 - Added the lead integration test to the Vercel build command so API regressions block deployment.
 - Added a read-only service diagnostic that never sends SMS and never creates lead data.
+- Reject 2Factor HTTP 200 replies unless the JSON explicitly reports a successful send status; test both provider rejection and missing status.
 
 ## Commands
 

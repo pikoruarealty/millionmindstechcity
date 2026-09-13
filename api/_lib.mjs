@@ -308,7 +308,8 @@ export async function sendOtpSms(lead, otp, config) {
   let body = {};
   try { body = raw ? JSON.parse(raw) : {}; } catch { body = {}; }
   const status = String(body.Status || body.status || "").toLowerCase();
-  if (!response.ok || (status && !["success", "sent"].includes(status))) {
+  // A 200 without a provider success status is not proof that an SMS was sent.
+  if (!response.ok || !["success", "sent"].includes(status)) {
     throw new Error(`2Factor OTP request failed (${response.status}): ${raw.slice(0, 500)}`);
   }
 }

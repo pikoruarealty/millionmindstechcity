@@ -18,6 +18,7 @@ if (missing.length) {
 
 if (env.SUPABASE_URL && env.SUPABASE_SERVICE_ROLE_KEY) {
   const key = env.SUPABASE_SERVICE_ROLE_KEY;
+  let supabaseUnavailable = false;
   let supabaseUrlValid = false;
   try {
     const parsed = new URL(env.SUPABASE_URL);
@@ -33,12 +34,15 @@ if (env.SUPABASE_URL && env.SUPABASE_SERVICE_ROLE_KEY) {
       const response = await fetch(`${env.SUPABASE_URL.replace(/\/$/, '')}/rest/v1/${table}?select=id&limit=0`, { method: 'HEAD', headers });
       console.log(`[check-lead-services] Supabase ${table}: ${response.status} ${response.ok ? 'reachable' : 'failed'}`);
       if (!response.ok) process.exitCode = 1;
+      if (!response.ok) supabaseUnavailable = true;
     } catch (error) {
       const code = error?.cause?.code || error?.name || 'unknown';
       console.log(`[check-lead-services] Supabase ${table}: network error (${code})`);
       process.exitCode = 1;
+      supabaseUnavailable = true;
     }
   }
+  if (supabaseUnavailable) console.log('[check-lead-services] OTP is blocked: the challenge must be saved in Supabase before any SMS can be sent');
 }
 
 if (env.BREVO_API_KEY) {

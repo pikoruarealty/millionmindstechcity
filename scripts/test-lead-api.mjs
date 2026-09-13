@@ -12,12 +12,14 @@ process.env.ADMIN_EMAIL = 'admin@example.com';
 const { default: requestOtp } = await import('../api/request-otp.mjs');
 const { default: verifyOtp } = await import('../api/verify-otp.mjs');
 const { default: submitLead } = await import('../api/submit-lead.mjs');
+const { sendOtpSms } = await import('../api/_lib.mjs');
 
 let otpRecord = null;
 let deliveredOtp = '';
 const savedLeads = [];
 let sentEmails = 0;
 let failSupabase = false;
+let smsResponseBody = { Status: 'Success' };
 
 globalThis.fetch = async (input, options = {}) => {
   const url = String(input);
@@ -46,7 +48,7 @@ globalThis.fetch = async (input, options = {}) => {
   if (url.startsWith('https://2factor.in/API/V1/')) {
     const parts = url.split('/');
     deliveredOtp = decodeURIComponent(parts[parts.indexOf('SMS') + 2] || '');
-    return Response.json({ Status: 'Success' });
+    return Response.json(smsResponseBody);
   }
   if (url === 'https://api.brevo.com/v3/smtp/email') {
     sentEmails += 1;
@@ -98,6 +100,12 @@ assert.equal(savedLeads.length, 1);
 assert.ok(savedLeads[0].verified_at);
 assert.ok(otpRecord.used_at);
 
+smsResponseBody = { Status: 'Failure', Details: 'SMS not accepted' };
+await assert.rejects(sendOtpSms(gateLead, '123456', { twoFactorApiKey: 'test-2factor-key' }), /2Factor OTP request failed/);
+smsResponseBody = {};
+await assert.rejects(sendOtpSms(gateLead, '123456', { twoFactorApiKey: 'test-2factor-key' }), /2Factor OTP request failed/);
+smsResponseBody = { Status: 'Success' };
+
 const contactResponse = await submitLead.fetch(apiRequest('submit-lead', {
   fname: 'Contact Test',
   email: 'contact@example.com',
@@ -116,6 +124,10 @@ assert.equal(sentEmails, 2);
 failSupabase = true;
 const originalConsoleError = console.error;
 console.error = () => {};
+const otpBeforeOutage = deliveredOtp;
+const otpOutageResponse = await requestOtp.fetch(apiRequest('request-otp', { ...gateLead, phone: '9876543211' }));
+assert.equal(otpOutageResponse.status, 500);
+assert.equal(deliveredOtp, otpBeforeOutage, 'SMS must not be sent when its challenge cannot be saved');
 const emailFallbackResponse = await submitLead.fetch(apiRequest('submit-lead', {
   fname: 'Fallback Test',
   email: 'fallback@example.com',
@@ -139,4 +151,4 @@ assert.equal(blockedOriginResponse.status, 403);
 const invalidMethodResponse = await submitLead.fetch(new Request('https://www.millionmindstechcity.in/api/submit-lead'));
 assert.equal(invalidMethodResponse.status, 405);
 
-console.log('[test-lead-api] OTP request, verification, database and email capture, database-outage fallback, origin protection and method handling passed');
+console.log('[test-lead-api] OTP request and verification, provider rejection, database-outage SMS guard, lead capture fallback, origin protection and method handling passed');
