@@ -8,16 +8,16 @@ Updated: 13 September 2026
 |---|---|
 | Live `/api/request-otp` route | Reachable; rejects GET with 405 and invalid POST with 400 as expected |
 | Live `/api/verify-otp` route | Reachable; rejects GET with 405 and invalid POST with 400 as expected |
-| Live `/api/submit-lead` route | Reachable, but a valid production test returned HTTP 500 |
+| Live `/api/submit-lead` route | Reachable; the earlier valid production test returned HTTP 500 before Supabase recovery, and has not been repeated |
 | Local environment-variable presence | All required variable names have non-empty local values; values were not printed |
 | Local Brevo credential | Authenticated successfully with a read-only account request |
-| Local Supabase URL | Valid HTTPS and hosted-domain format, but DNS lookup returns `ENOTFOUND` |
+| Local Supabase connection after project recovery | `leads` and `otp_challenges` both return HTTP 200 with the configured server key |
 | Mocked end-to-end integration test | Passed; now covers 2Factor rejection and Supabase-outage OTP guard |
 | Real OTP delivery | Not triggered; requires an owner-approved controlled Indian phone number |
 
-The failed production test was labelled `API Health Check` and returned 500 before a successful capture response. Under the deployed implementation, an email failure after a successful database save would not return 500, so the failure points to production configuration or Supabase storage connectivity rather than the contact-form JavaScript.
+The earlier failed production test was labelled `API Health Check` and returned 500 while the Supabase project was paused. This result is historical, not evidence of a continuing production failure. The recovered local project now responds successfully; production write and OTP-delivery checks remain outstanding.
 
-The local Supabase hostname does not resolve. The OTP handler saves its challenge to Supabase before calling 2Factor, so this local configuration cannot send an OTP. Production configuration could differ; without access to the Vercel environment and function logs, the exact live failure cannot be confirmed. A successful provider response also does not prove handset delivery, which needs a controlled phone test.
+The OTP handler saves its challenge to Supabase before calling 2Factor, so recovery removes the previously observed local blocker. The live OTP route still responds to read-only requests, but neither that check nor the local table checks prove that the production Vercel environment can write or that SMS reaches a handset. Those require a controlled phone test and, if it fails, the Vercel function log reference.
 
 ## Fixes implemented locally
 
@@ -40,15 +40,12 @@ node scripts/check-lead-services.mjs
 node scripts/validate-seo.mjs
 ```
 
-## Required production repair
+## Remaining production verification
 
-1. Authenticate or link this directory to the correct Vercel project.
-2. In the Vercel Production environment, replace `SUPABASE_URL` with the URL of an active Supabase project.
-3. Add the matching server-only `SUPABASE_SERVICE_ROLE_KEY` secret key.
-4. Run `supabase/schema.sql` in that same project.
-5. Redeploy so the API resilience and diagnostic-reference changes become live.
-6. Run `node scripts/check-lead-services.mjs` until both tables return a successful status.
-7. Submit one contact test and confirm the row in `public.leads` plus the admin email.
-8. With an approved test phone, complete one OTP flow and confirm `verified_at` is populated.
+1. Confirm Vercel Production uses the recovered project's `SUPABASE_URL` and matching server-only `SUPABASE_SERVICE_ROLE_KEY`.
+2. Confirm `supabase/schema.sql` has been applied in that project, and the latest GitHub commit is deployed.
+3. With an approved test phone, request an OTP, complete verification, and confirm `verified_at` is populated in `public.leads`.
+4. If the request fails, use the response reference and timestamp to inspect the Vercel function logs; if it reports success but SMS does not arrive, check the 2Factor delivery report, credits, and approved template.
+5. Submit one contact test and confirm the row in `public.leads` plus the admin email.
 
 Never paste production secrets into documentation, browser JavaScript, source control or chat. Configure them directly in the hosting provider's encrypted environment-variable settings.
