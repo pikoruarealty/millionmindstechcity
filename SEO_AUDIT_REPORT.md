@@ -2,19 +2,19 @@
 
 Generated: 13 September 2026
 
-Scope: canonical static HTML routes before production deployment. HTTP status is the expected static-host response and must be rechecked after deployment.
+Scope: static HTML route validation plus live spot checks of the new pages and sitemap; the expected HTTP column is not a complete live crawl.
 
 ## Executive overview
 
 - **Technical baseline:** 61 indexable routes pass automated checks for unique titles, descriptions and H1s; canonicals, social metadata, JSON-LD, sitemap inclusion, internal links and favicon coverage. Two utility HTML routes are intentionally `noindex`.
 - **Content expansion completed:** 21 distinct-intent pages now include nearby-area, locality, commercial and decision guides plus three sourced project-intent pages for the master plan, official brochure and rent research. The sitemap contains 61 canonical `.in` URLs.
 - **Structured content completed:** new pages include substantial decision guidance, five visible FAQs, matching `FAQPage` JSON-LD, breadcrumbs, source links and contextual internal links.
-- **Deployment blocker (P0):** the live `.in` apex host must serve the same site as `www` over HTTPS instead of the current apex TLS failure. Deploy this repo, then verify the canonical host, robots, sitemap, favicon and five-second lead popup.
+- **Deployment blocker (P0):** the live `.in` apex host must serve the same site as `www` over HTTPS instead of the current apex TLS failure. Verify this deployment, including the canonical host, robots, sitemap, favicon and five-second lead popup.
 - **Authority (P1):** earn relevant local, property and technology citations and links; page volume by itself cannot create rankings. Keep the independent-site disclosure prominent unless official developer authorization is documented.
 - **Measurement (P0):** use Search Console and analytics conversion events to review indexing, non-branded queries, qualified leads and landing-page performance every 28 days.
 
 - **Project keyword gap addressed:** added unique master-plan, brochure and rent-intent pages; strengthened the M One floor-plan guide with evidence from the official brochure. No live rent or vacancy was invented.
-- **Live-versus-local gap:** the live `.in` sitemap exposed 58 URLs at this review, while this repository now has 61. The apex HTTPS host still failed a direct TLS check; publishing and canonical-host repair need separate verification.
+- **Live spot check:** the three new canonical paths returned HTTP 200 with the new content, the homepage linked to them, and the live sitemap exposed 61 URLs after deployment. The apex HTTPS host still failed a direct TLS check and needs domain/certificate repair.
 
 ## Inputs needed from the owner
 
