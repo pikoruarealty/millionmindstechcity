@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/test-lead-api.mjs && node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs",
+  "buildCommand": "node scripts/test-lead-api.mjs && node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/test-popup-timing.mjs && node scripts/validate-seo.mjs",
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,

@@ -2657,8 +2657,7 @@ body {
 <script id="mg-otp-gate-script">
 (function () {
   "use strict";
-  var storageKey = "million_minds_verified_session";
-  var popupDelay = 6000;
+  var popupDelay = 5000;
   var body = document.body;
   var gate = document.getElementById("mg-otp-gate");
   var site = document.getElementById("mg-site-content");
@@ -2704,18 +2703,10 @@ body {
   }
 
   function unlock() {
-    try { window.sessionStorage.setItem(storageKey, "1"); } catch (err) {}
     body.classList.remove("mg-locked");
     if (site) site.inert = false;
     if (gate) gate.remove();
   }
-
-  try {
-    if (window.sessionStorage.getItem(storageKey) === "1") {
-      unlock();
-      return;
-    }
-  } catch (err) {}
 
   function showGate() {
     if (!gate || !document.body.contains(gate)) return;
@@ -2728,12 +2719,8 @@ body {
     });
   }
 
-  function scheduleGate() {
-    window.setTimeout(showGate, popupDelay);
-  }
-
-  if (document.readyState === "complete") scheduleGate();
-  else window.addEventListener("load", scheduleGate, { once: true });
+  // Start on page visit, not window load: a slow hero video must not delay it.
+  window.setTimeout(showGate, popupDelay);
 
   reqSelect.addEventListener("change", function () {
     var isOther = reqSelect.value === "__other__";

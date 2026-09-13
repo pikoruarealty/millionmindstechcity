@@ -1,7 +1,7 @@
 # Netlify Configuration
 
 [build]
-  command = "node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/validate-seo.mjs"
+  command = "node scripts/generate-seo-pages.mjs && node scripts/apply-seo.mjs && node scripts/test-popup-timing.mjs && node scripts/validate-seo.mjs"
   publish = "."
 
 # Redirect all HTTP to HTTPS
