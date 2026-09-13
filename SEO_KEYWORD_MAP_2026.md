@@ -1,6 +1,6 @@
-# Million Minds Tech City .in — Keyword & Page Map (58 indexable pages)
+# Million Minds Tech City .in — Keyword & Page Map (61 indexable pages)
 
-Updated: 12 September 2026  
+Updated: 13 September 2026  
 Primary domain: `https://www.millionmindstechcity.in`  
 Strategy: one useful page per distinct search intent; no duplicate city-name or keyword-swapped doorway pages.
 
@@ -48,7 +48,10 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 | P1 | `/localities/s-g-highway-ahmedabad` | SG Highway Ahmedabad business district | office space SG Highway Ahmedabad · business park Ahmedabad SG Highway | local informational |
 | P1 | `/localities/vaishnodevi-circle-ahmedabad` | Vaishnodevi Circle Ahmedabad office location | office near Vaishnodevi Circle · commercial property Vaishnodevi Circle Ahmedabad · Million Minds Tech City Vaishnodevi Circle | local commercial research |
 | P1 | `/luxury-office-space-ahmedabad` | luxury office space Ahmedabad | premium office space Ahmedabad · luxury commercial office SG Highway · high-end corporate office Ahmedabad · Grade A luxury office Ahmedabad | commercial |
+| P1 | `/million-minds-tech-city-brochure` | million minds tech city brochure | million minds tech city brochure PDF · M One brochure Ahmedabad · million minds tech city PDF | document/navigation |
+| P1 | `/million-minds-tech-city-master-plan` | million minds tech city master plan | million minds tech city phases · M One phase 1 Ahmedabad · million minds tech city development plan | project research |
 | P1 | `/million-minds-tech-city-news` | million minds tech city latest news | million minds tech city updates · M One Ahmedabad news | freshness/informational |
+| P1 | `/million-minds-tech-city-rent` | million minds tech city rent | million minds tech city office rent · M One Ahmedabad rent · million minds tech city availability | commercial pricing research |
 | P1 | `/office-space-near-gift-city` | office space near GIFT City | office space Ahmedabad GIFT City corridor · commercial office near GIFT City Ahmedabad | commercial/research |
 | P1 | `/office-space-sg-highway-ahmedabad` | office space SG Highway Ahmedabad | Grade A office space SG Highway Ahmedabad · office leasing SG Highway Ahmedabad | commercial |
 | P1 | `/office-space-vaishnodevi-circle-ahmedabad` | office space Vaishnodevi Circle Ahmedabad | commercial office near Vaishnodevi Circle · office space near Nirma University Ahmedabad | commercial/research |

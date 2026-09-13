@@ -1518,5 +1518,89 @@
       "ImageObject",
       "FAQPage"
     ]
+  },
+  "/million-minds-tech-city-master-plan": {
+    "slug": "/million-minds-tech-city-master-plan",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-master-plan",
+    "title": "Million Minds Tech City Master Plan | Ahmedabad",
+    "meta_description": "Understand the published Million Minds Tech City master plan, M One Phase 1, office, residential and mixed-use components, and what remains to verify.",
+    "h1": "Million Minds Tech City Master Plan and Phases",
+    "primary_keyword": "million minds tech city master plan",
+    "secondary_keywords": [
+      "million minds tech city phases",
+      "M One phase 1 Ahmedabad",
+      "million minds tech city development plan"
+    ],
+    "search_intent": "project research",
+    "priority": "P1",
+    "last_modified": "2026-09-13",
+    "og_title": "Million Minds Tech City Master Plan | Ahmedabad",
+    "og_description": "Understand the published Million Minds Tech City master plan, M One Phase 1, office, residential and mixed-use components, and what remains to verify.",
+    "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject",
+      "FAQPage"
+    ]
+  },
+  "/million-minds-tech-city-brochure": {
+    "slug": "/million-minds-tech-city-brochure",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-brochure",
+    "title": "Million Minds Tech City Brochure | Official PDF Guide",
+    "meta_description": "Open the official Million Minds Tech City brochure and use this independent guide to its M One plans, specifications, amenities and verification checks.",
+    "h1": "Million Minds Tech City Brochure and PDF Guide",
+    "primary_keyword": "million minds tech city brochure",
+    "secondary_keywords": [
+      "million minds tech city brochure PDF",
+      "M One brochure Ahmedabad",
+      "million minds tech city PDF"
+    ],
+    "search_intent": "document/navigation",
+    "priority": "P1",
+    "last_modified": "2026-09-13",
+    "og_title": "Million Minds Tech City Brochure | Official PDF Guide",
+    "og_description": "Open the official Million Minds Tech City brochure and use this independent guide to its M One plans, specifications, amenities and verification checks.",
+    "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject",
+      "FAQPage"
+    ]
+  },
+  "/million-minds-tech-city-rent": {
+    "slug": "/million-minds-tech-city-rent",
+    "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-rent",
+    "title": "Million Minds Tech City Rent & Availability Guide",
+    "meta_description": "Research Million Minds Tech City office rent and availability without invented rates. See what to request in a current M One leasing proposal and compare total cost.",
+    "h1": "Million Minds Tech City Office Rent and Availability",
+    "primary_keyword": "million minds tech city rent",
+    "secondary_keywords": [
+      "million minds tech city office rent",
+      "M One Ahmedabad rent",
+      "million minds tech city availability"
+    ],
+    "search_intent": "commercial pricing research",
+    "priority": "P1",
+    "last_modified": "2026-09-13",
+    "og_title": "Million Minds Tech City Rent & Availability Guide",
+    "og_description": "Research Million Minds Tech City office rent and availability without invented rates. See what to request in a current M One leasing proposal and compare total cost.",
+    "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject",
+      "FAQPage"
+    ]
   }
 }

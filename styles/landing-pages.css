@@ -50,6 +50,7 @@ h2 { margin: 0; font-size: clamp(1.85rem, 3.5vw, 3rem); line-height: 1.15; lette
 .article { max-width: 920px; padding-top: 72px; padding-bottom: 72px; }
 .article-meta { margin-bottom: 30px; color: #617084; font-size: .88rem; }
 .article > .facts { grid-template-columns: repeat(3, 1fr); margin-bottom: 52px; }
+.document-link { margin: -24px 0 48px; }
 .article-section { padding: 34px 0; border-top: 1px solid var(--line); }
 .article-section h2 { max-width: 760px; font-size: clamp(1.6rem, 3vw, 2.45rem); }
 .article-section p { margin: 18px 0 0; color: var(--ink-soft); }

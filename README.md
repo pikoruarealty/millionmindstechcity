@@ -8,10 +8,10 @@ SEO-focused commercial real-estate website for Million Minds Tech City, M One, S
 
 [![Live Website](https://img.shields.io/badge/LIVE_WEBSITE-millionmindstechcity.in-18a779?style=for-the-badge)](https://www.millionmindstechcity.in/)
 [![Project Website](https://img.shields.io/badge/PROJECT_WEBSITE-.com-2668b4?style=for-the-badge)](https://www.millionmindstechcity.com/)
-[![Sitemap](https://img.shields.io/badge/SEO_SITEMAP-58_URLs-0d1b2e?style=for-the-badge)](https://www.millionmindstechcity.in/sitemap.xml)
+[![Sitemap](https://img.shields.io/badge/SEO_SITEMAP-61_URLs-0d1b2e?style=for-the-badge)](https://www.millionmindstechcity.in/sitemap.xml)
 [![Repository](https://img.shields.io/badge/GITHUB-REPOSITORY-24292f?style=for-the-badge&logo=github)](https://github.com/pikoruarealty/millionmindstechcity)
 
-[Open live site](https://www.millionmindstechcity.in/) · [View sitemap](https://www.millionmindstechcity.in/sitemap.xml) · [SEO audit](SEO_AUDIT_REPORT.md) · [Keyword map](SEO_KEYWORD_MAP_58_PAGES_2026.md) · [Deployment checklist](SEO_DEPLOYMENT_CHECKLIST.md)
+[Open live site](https://www.millionmindstechcity.in/) · [View sitemap](https://www.millionmindstechcity.in/sitemap.xml) · [SEO audit](SEO_AUDIT_REPORT.md) · [Keyword map](SEO_KEYWORD_MAP_2026.md) · [Deployment checklist](SEO_DEPLOYMENT_CHECKLIST.md)
 
 </div>
 
@@ -25,10 +25,10 @@ The site is a static, performance-oriented marketing and research platform with 
 |---|---|
 | Primary SEO domain | [`www.millionmindstechcity.in`](https://www.millionmindstechcity.in/) |
 | Project reference domain | [`www.millionmindstechcity.com`](https://www.millionmindstechcity.com/) |
-| Canonical URLs | 58 indexable pages on `.in` |
+| Canonical URLs | 61 indexable pages on `.in` |
 | Utility pages | 404 and legacy redirect are intentionally `noindex` |
 | Frontend | Static HTML, CSS and vanilla JavaScript |
-| Lead capture | Six-second popup, phone OTP and enquiry workflow |
+| Lead capture | Five-second homepage popup, phone OTP and enquiry workflow |
 | API | Vercel serverless functions in `api/` |
 | Lead storage | Supabase |
 | Email and OTP | Brevo and 2Factor |
@@ -42,6 +42,9 @@ The site is a static, performance-oriented marketing and research platform with 
 - [Homepage](https://www.millionmindstechcity.in/)
 - [Office space at Million Minds Tech City](https://www.millionmindstechcity.in/million-minds-tech-city-office-space)
 - [M One office tower](https://www.millionmindstechcity.in/m-one-million-minds-tech-city)
+- [Project master plan](https://www.millionmindstechcity.in/million-minds-tech-city-master-plan)
+- [Official brochure guide](https://www.millionmindstechcity.in/million-minds-tech-city-brochure)
+- [Rent and availability guide](https://www.millionmindstechcity.in/million-minds-tech-city-rent)
 - [Address and location](https://www.millionmindstechcity.in/million-minds-tech-city-address-location)
 - [Companies and occupier tracker](https://www.millionmindstechcity.in/million-minds-tech-city-companies)
 - [Specifications](https://www.millionmindstechcity.in/million-minds-tech-city-specifications)
@@ -77,7 +80,7 @@ The homepage includes:
 - Dark readability overlay and image poster fallback
 - Reduced-motion fallback for accessibility
 - Project facts, location, gallery, research hub and visible FAQs
-- A lead-capture popup scheduled six seconds after page load
+- A lead-capture popup scheduled five seconds after homepage script start
 - OTP verification before a lead is marked complete
 
 The approved `.com` video origin is explicitly allowed by the Content Security Policy in both `vercel.json` and `netlify.toml`.
@@ -149,12 +152,12 @@ node scripts/check-lead-services.mjs
 Expected result:
 
 ```text
-[generate-seo-pages] generated 58 crawlable pages
-[validate-seo] 60 HTML pages passed metadata, H1, schema, sitemap and internal-link checks
+[generate-seo-pages] generated 61 crawlable pages
+[validate-seo] 63 HTML pages passed metadata, H1, schema, sitemap and internal-link checks
 [test-lead-api] OTP request, verification, database and email capture, database-outage fallback, origin protection and method handling passed
 ```
 
-The 60 checked files comprise 58 indexable URLs and two intentional `noindex` utility routes.
+The 63 checked files comprise 61 indexable URLs and two intentional `noindex` utility routes.
 
 ## Environment variables
 
@@ -182,18 +185,18 @@ See [Vercel deployment](VERCEL_DEPLOYMENT.md) and [Supabase setup](SUPABASE_SETU
 3. Confirm `www.millionmindstechcity.in` points to the production deployment.
 4. Redirect apex `.in` to the HTTPS `www` canonical in one hop.
 5. Run the SEO build and validation pipeline.
-6. Deploy and verify the hero video, six-second popup and OTP flow.
+6. Deploy and verify the hero video, five-second homepage popup and OTP flow.
 7. Confirm every sitemap URL returns HTTP 200 with the expected self-canonical.
 8. Submit [`sitemap.xml`](https://www.millionmindstechcity.in/sitemap.xml) in Google Search Console and Bing Webmaster Tools.
 
-The current high-priority live infrastructure issue is ensuring that `https://millionmindstechcity.in/` no longer serves a parking/lander response and redirects directly to the canonical `www` site.
+The current high-priority live infrastructure issue is the apex `https://millionmindstechcity.in/` TLS failure. Fix the domain/certificate configuration so it redirects directly to the canonical `www` site.
 
 ## SEO operations
 
 Use these project documents as the operating source of truth:
 
 - [Automated route audit](SEO_AUDIT_REPORT.md)
-- [58-page keyword map](SEO_KEYWORD_MAP_58_PAGES_2026.md)
+- [61-page keyword map](SEO_KEYWORD_MAP_2026.md)
 - [Dual-domain audit and ranking plan](DUAL_DOMAIN_SEO_AUDIT_AND_RANKING_PLAN_2026.md)
 - [Competitor gap plan](COMPETITOR_SEO_GAP_PLAN_2026.md)
 - [Deployment checklist](SEO_DEPLOYMENT_CHECKLIST.md)

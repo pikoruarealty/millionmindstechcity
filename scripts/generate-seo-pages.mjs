@@ -238,6 +238,8 @@ for (const [route, title, desc, h1, intro, sections, related] of trustPages) pag
 
 const expansionPages = JSON.parse(await readFile(path.join(ROOT, 'seo/expansion-pages.json'), 'utf8'));
 pages.push(...expansionPages);
+const projectPages = JSON.parse(await readFile(path.join(ROOT, 'seo/project-pages.json'), 'utf8'));
+pages.push(...projectPages);
 
 const seoOverrides = {
   '/million-minds-tech-city-companies': { updated: '2026-09-12' },
@@ -253,6 +255,30 @@ const seoOverrides = {
   '/terms': { desc: 'Read the terms governing this independent Million Minds Tech City information and leasing-assistance website, including important limitations.', updated: '2026-09-12' }
 };
 for (const page of pages) Object.assign(page, seoOverrides[page.route] || {});
+
+const extraRelated = {
+  '/m-one-million-minds-tech-city': ['/million-minds-tech-city-master-plan', '/million-minds-tech-city-brochure', '/million-minds-tech-city-rent'],
+  '/million-minds-tech-city-office-space': ['/million-minds-tech-city-rent', '/million-minds-tech-city-brochure'],
+  '/million-minds-tech-city-specifications': ['/million-minds-tech-city-brochure', '/million-minds-tech-city-master-plan']
+};
+for (const page of pages) if (extraRelated[page.route]) page.related = [...new Set([...page.related, ...extraRelated[page.route]])];
+
+const floorPlanGuide = pages.find(page => page.route === '/blog/m-one-floor-plates-specifications-leasing');
+if (floorPlanGuide) {
+  floorPlanGuide.sections.push(
+    ['Read the published floor drawings carefully', [
+      'The official project brochure groups M One office drawings by floor ranges rather than presenting one universal plan. Its published layouts identify four office areas, corridor and service areas, restrooms, lift lobbies, fire stairs and, on some floor groups, refuge balconies. Ask which version applies to the exact floor being offered and whether later approvals changed it.',
+      'The brochure also shows a ground-floor arrival and service layout plus a podium plan. For a large employer, model visitor entry, staff drop-off, service deliveries, vertical transport and accessible movement together; a test fit limited to desks can miss important operational constraints.'
+    ]],
+    ['Turn a brochure plan into a usable test fit', [
+      'Request a dimensioned PDF or CAD drawing for the exact unit, with measured carpet and chargeable area clearly defined. Mark columns, core, AHU or service zones, refuge space, emergency egress and any areas excluded from the lease. Then test realistic seating, meeting rooms, collaboration, pantry, storage and server requirements against the remaining space.',
+      'Do not infer live vacancy or a binding lease area from a typical 42,000 sq. ft. headline. The brochure illustrates different floor-group area labels; the final premises plan, area certificate and written offer must reconcile before a financial comparison.'
+    ]]
+  );
+  floorPlanGuide.sources.push(['Official Million Minds Tech City brochure', 'https://millionmindstechcity.com/assets/pdf/brochure.pdf']);
+  floorPlanGuide.related = [...new Set([...floorPlanGuide.related, '/million-minds-tech-city-brochure', '/million-minds-tech-city-rent'])];
+  floorPlanGuide.updated = '2026-09-13';
+}
 
 const labels = Object.fromEntries(pages.map(p => [p.route, p.h1]));
 Object.assign(labels, { '/': 'Million Minds Tech City Ahmedabad', '/blog': 'Research & Guides' });
@@ -273,6 +299,7 @@ function renderPage(p) {
   const faqSchema = p.faqs?.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: p.faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) } : null;
   const facts = p.facts.map(([a,b]) => '<div class="fact"><strong>' + esc(a) + '</strong><span>' + esc(b) + '</span></div>').join('');
   const table = p.table ? '<div class="table-wrap"><table><thead><tr>' + p.table.headers.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' + p.table.rows.map(row => '<tr>' + row.map(x => '<td>' + esc(x) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>' : '';
+  const resourceLink = p.resourceLink ? '<p class="document-link"><a class="button" data-source href="' + esc(p.resourceLink[1]) + '" target="_blank" rel="noopener noreferrer">' + esc(p.resourceLink[0]) + '</a></p>' : '';
   const sections = p.sections.map(([h, paras]) => {
     const paragraphs = Array.isArray(paras) ? paras : [paras];
     return '<section class="article-section"><h2>' + esc(h) + '</h2>' + paragraphs.map(x => '<p>' + esc(x) + '</p>').join('') + '</section>';
@@ -287,7 +314,7 @@ function renderPage(p) {
     '<script type="application/ld+json">' + JSON.stringify(identitySchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(pageSchema).replace(/</g, '\\u003c') + '</script><script type="application/ld+json">' + JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') + '</script>' + (faqSchema ? '<script type="application/ld+json">' + JSON.stringify(faqSchema).replace(/</g, '\\u003c') + '</script>' : '') + '</head><body>\n' +
     '<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/">Million <span>Minds</span></a><div class="nav-links"><a href="/million-minds-tech-city-address-location">Location</a><a href="/million-minds-tech-city-companies">Companies</a><a href="/m-one-million-minds-tech-city">M One</a><a href="/blog">Guides</a><a href="/#contact">Enquire</a></div></nav></header>\n' +
     '<main><section class="hero article-hero" style="background-image:url(\'' + prefix + '/images/08_rockefeller-center.jpg\')"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a>' + (p.article ? '<span>/</span><a href="/blog">Blog</a>' : '') + '<span>/</span><span aria-current="page">' + esc(p.h1) + '</span></nav><span class="eyebrow">' + esc(p.eyebrow) + '</span><h1>' + esc(p.h1) + '</h1><p class="hero-copy">' + esc(p.intro) + '</p></div></section>\n' +
-    '<article class="article shell"><div class="article-meta">By ' + esc(OPERATOR) + ' · Updated <time datetime="' + pageUpdated + '">' + esc(updatedLabel) + '</time></div><div class="facts">' + facts + '</div>' + table + sections + sources + authorNote + '</article>' + faq +
+    '<article class="article shell"><div class="article-meta">By ' + esc(OPERATOR) + ' · Updated <time datetime="' + pageUpdated + '">' + esc(updatedLabel) + '</time></div><div class="facts">' + facts + '</div>' + resourceLink + table + sections + sources + authorNote + '</article>' + faq +
     '<section class="related"><div class="shell"><span class="section-label">Related pages</span><h2>Continue your research</h2><div class="related-grid">' + renderLinks(p.related) + '</div></div></section><section class="cta"><div class="shell"><h2>Discuss an office requirement</h2><p>Share your team size, target area, timing and technical needs for a current leasing conversation.</p><a class="button" href="/#contact">Request a Consultation</a></div></section></main>\n' +
     '<footer class="site-footer"><div class="shell"><div class="footer-row"><span>Independent information & leasing assistance by PIKORUA Realty</span><a href="/disclaimer">Disclaimer</a></div><p class="footer-disclaimer">This website is an independent real-estate information and enquiry-assistance platform and is not the official website of Ganesh Housing Limited or Million Minds Tech City, unless expressly stated otherwise. Project information is compiled from publicly available sources and should be independently verified before a leasing or investment decision.</p><nav class="legal-links" aria-label="Legal"><a href="/about">About</a><a href="/editorial-policy">Editorial policy</a><a href="/sources-methodology">Sources</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav></div></footer></body></html>\n';
 }
@@ -374,16 +401,16 @@ const keywordRows = Object.values(metadata).map(item => ({
 const csvCell = value => '"' + String(value).replace(/"/g, '""') + '"';
 const keywordCsv = ['priority,route,primary_keyword,secondary_keywords,search_intent,title', ...keywordRows.map(row => [row.priority, row.route, row.primary, row.secondary, row.intent, row.title].map(csvCell).join(','))].join('\n') + '\n';
 await writeFile(path.join(ROOT, 'seo/keyword-map.csv'), keywordCsv, 'utf8');
-const keywordMarkdown = '# Million Minds Tech City .in — Keyword & Page Map (58 indexable pages)\n\n' +
-  'Updated: 12 September 2026  \nPrimary domain: `https://www.millionmindstechcity.in`  \nStrategy: one useful page per distinct search intent; no duplicate city-name or keyword-swapped doorway pages.\n\n' +
+const keywordMarkdown = '# Million Minds Tech City .in — Keyword & Page Map (' + Object.keys(metadata).length + ' indexable pages)\n\n' +
+  'Updated: 13 September 2026  \nPrimary domain: `https://www.millionmindstechcity.in`  \nStrategy: one useful page per distinct search intent; no duplicate city-name or keyword-swapped doorway pages.\n\n' +
   '## How to use this map\n\nEach primary keyword has one owning URL. Secondary phrases are semantic variations to answer naturally, not a repetition target. Review Search Console queries and conversions monthly; consolidate pages if Google consistently treats two URLs as the same intent. Rankings are not guaranteed and depend on indexing, authority, links, competition, user response and technical quality.\n\n' +
   '## Route ownership\n\n| Priority | Index URL | Primary keyword | Secondary keyword cluster | Intent |\n|---|---|---|---|---|\n' +
   keywordRows.map(row => '| ' + [row.priority, '`' + row.route + '`', row.primary, row.secondary.replace(/\|/g, '·'), row.intent].map(value => String(value).replace(/\|/g, '\\|')).join(' | ') + ' |').join('\n') +
   '\n\n## Content governance\n\n- Keep the verified project location as “Behind Nirma University, Off SG Highway, Ahmedabad”; locality pages describe commute or shortlist context and must not invent alternate addresses.\n- Publish live rates, inventory, delivery, certification and occupancy only with a dated primary source or written project confirmation.\n- Keep visible FAQs aligned with `FAQPage` JSON-LD. Structured data can aid understanding but does not guarantee rich results.\n- Update pages when material facts change; do not change dates without a substantive review.\n- The `.com` and `.in` domains should not compete with duplicate indexable content. Consolidate authority to `.in` using server-side redirects and matching canonicals when deployment access permits.\n';
 const researchNotes = '\n## Research basis\n\nGoogle recommends substantial, people-first content rather than pages created mainly to capture search traffic.[^1] Its spam policy specifically warns against substantially similar location or query pages that funnel visitors to the same destination.[^2] The expansion therefore uses a limited set of distinct decision intents instead of dozens of keyword-swapped pages. Google also requires structured data to represent visible page content and does not guarantee a rich result; each FAQ schema block mirrors the visible FAQ section.[^3] Project-location wording is anchored to current developer information.[^4]\n\n## Sources\n\n[^1]: [Google Search Central — Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), reviewed 12 September 2026.\n[^2]: [Google Search Central — Spam policies: doorway abuse and scaled content abuse](https://developers.google.com/search/docs/essentials/spam-policies), reviewed 12 September 2026.\n[^3]: [Google Search Central — General structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies), reviewed 12 September 2026.\n[^4]: [Ganesh Housing — Million Minds Tech City project information](https://ganeshhousing.com/millionmindstechcity), reviewed 12 September 2026.\n';
-await writeFile(path.join(ROOT, 'SEO_KEYWORD_MAP_58_PAGES_2026.md'), keywordMarkdown + researchNotes, 'utf8');
+await writeFile(path.join(ROOT, 'SEO_KEYWORD_MAP_2026.md'), keywordMarkdown + researchNotes, 'utf8');
 const sitemapRoutes = ['/', '/blog', ...pages.map(p => p.route)];
 const pageUpdatedByRoute = Object.fromEntries(pages.map(page => [page.route, page.updated || UPDATED]));
-const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemapRoutes.map(route => '  <url><loc>' + ORIGIN + (route === '/' ? '/' : route) + '</loc><lastmod>' + (route === '/' ? '2026-09-12' : pageUpdatedByRoute[route] || UPDATED) + '</lastmod></url>').join('\n') + '\n</urlset>\n';
+const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemapRoutes.map(route => '  <url><loc>' + ORIGIN + (route === '/' ? '/' : route) + '</loc><lastmod>' + (route === '/' ? '2026-09-13' : pageUpdatedByRoute[route] || UPDATED) + '</lastmod></url>').join('\n') + '\n</urlset>\n';
 await writeFile(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
 console.log('[generate-seo-pages] generated ' + (pages.length + 2) + ' crawlable pages');
