@@ -192,7 +192,7 @@ function applyMetaDescription(html, description) {
 
 const BRAND_ICON_MARKER = "<!-- BRAND ICONS -->";
 const BRAND_ICON_TAGS = `${BRAND_ICON_MARKER}
-<link rel="icon" href="/favicon.ico" sizes="32x32 192x192">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/images/brand/favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/apple-touch-icon.png">

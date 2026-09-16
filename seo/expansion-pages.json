@@ -435,5 +435,48 @@
     "search_intent": "informational/commercial research",
     "priority": "P1",
     "updated": "2026-09-12"
+  },
+  {
+    "route": "/office-space-ahmedabad",
+    "title": "Office Space in Ahmedabad | Rent & Leasing Guide",
+    "desc": "Find office space in Ahmedabad with a practical guide to locations, Grade A buildings, fitted and managed options, lease costs and due diligence.",
+    "eyebrow": "Ahmedabad office leasing",
+    "h1": "Office Space for Rent in Ahmedabad",
+    "intro": "Finding the right Ahmedabad office requires more than comparing listing prices. This independent guide helps companies define their requirement, compare business corridors and workplace formats, calculate total occupancy cost and verify a building before committing to a lease.",
+    "facts": [["Search brief", "Area, headcount, format, budget and move date"], ["Office formats", "Shell, fitted, managed and built-to-suit options"], ["Decision basis", "Location, building evidence and total occupancy cost"]],
+    "sections": [
+      ["Define the office requirement before searching", ["Set current and forecast headcount, peak attendance, shifts, workplace standards, meeting and support spaces, security zones, parking, technical loads and target occupancy. Convert that programme into a realistic carpet-area range through a test fit rather than relying on a generic square-foot-per-seat rule.", "State whether the team needs a fitted office, managed workspace, warm shell or custom build. Include minimum lease term, expansion needs, preferred possession condition and decision deadline so unsuitable listings can be removed early."]],
+      ["Compare Ahmedabad office locations by operating need", ["Evaluate employee origins, hiring markets, client access, leadership travel, shift transport, last-mile safety and business-continuity requirements. SG Highway, established city business districts and the wider Gandhinagar or GIFT City corridor serve different operating models; a famous address is not automatically the best workforce location.", "Test routes at relevant shift times and visit the exact building entrance. For northern SG Highway options such as Million Minds Tech City, verify the premises behind Nirma University against the same citywide scorecard instead of treating project marketing as a substitute for comparison."]],
+      ["Choose the right office format", ["A conventional lease can provide control and long-term fit-out value, while a managed or fitted office may reduce initial delivery time. Large enterprises may need contiguous floors, dedicated systems or a built-to-suit process. Compare each format against the required level of branding, security, technology, flexibility and capital commitment.", "Confirm what is actually included: furniture, meeting rooms, cabling, internet, power backup, cooling hours, reception, housekeeping, maintenance and statutory responsibilities. Labels such as plug-and-play or Grade A do not replace a written scope."]],
+      ["Calculate total occupancy cost", ["Normalise carpet, usable and chargeable area before comparing rent. Add common-area maintenance, parking, utilities, backup power, after-hours cooling, taxes, deposits, escalation, brokerage, fit-out, furniture, technology, transport, move costs and reinstatement.", "Request a dated written proposal for the exact floor or unit. Online asking prices and broad market averages cannot confirm current inventory, area efficiency, final commercial terms or the cost of meeting a particular company's technical standard."]],
+      ["Complete building and lease due diligence", ["Review approved use, title and authority to lease with qualified advisers. Technical teams should validate structure, floor efficiency, lifts, power, backup, cooling, fresh air, telecom diversity, fire and life safety, accessibility, parking, loading, security, handover and expansion.", "Shortlist buildings only after mandatory requirements are met, then use a weighted scorecard for talent, access, infrastructure, delivery, employee experience, resilience and cost. Record assumptions, document dates and unresolved conditions before approval."]]
+    ],
+    "faqs": [["How do I find office space for rent in Ahmedabad?", "Start with a written area, headcount, location, format, budget and timeline brief, then compare only premises that meet mandatory operational requirements."], ["Which Ahmedabad area is best for an office?", "The answer depends on workforce origins, clients, shifts, building needs, budget and growth. Compare exact sites rather than choosing from a citywide reputation alone."], ["What costs should be compared besides rent?", "Include maintenance, parking, utilities, taxes, deposits, escalation, fit-out, technology, transport and exit or reinstatement obligations."], ["What does Grade A office space mean?", "It is a market label. Translate it into measurable standards for systems, safety, efficiency, accessibility, management and resilience, then verify the evidence."], ["Can Million Minds Tech City be shortlisted for an Ahmedabad office?", "Yes, where its northern SG Highway location, office format and current unit evidence fit the requirement. Availability and terms must be confirmed in writing."]],
+    "related": ["/office-space-sg-highway-ahmedabad", "/corporate-office-space-ahmedabad", "/ready-to-move-office-space-ahmedabad", "/managed-office-ahmedabad-sg-highway", "/gcc-office-space-ahmedabad", "/million-minds-tech-city-office-space", "/blog/office-space-requirement-calculator-ahmedabad", "/blog/commercial-office-lease-checklist-ahmedabad"],
+    "sources": [["Cushman & Wakefield Ahmedabad Office MarketBeat Q1 2026", "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2026/q1/apac-and-gc/india-ahmedabad-office-q1-2026.pdf"], ["Official Million Minds Tech City project information", "https://ganeshhousing.com/millionmindstechcity"]],
+    "primary_keyword": "office space Ahmedabad",
+    "secondary_keywords": ["office space for rent Ahmedabad", "commercial office space Ahmedabad", "office for lease Ahmedabad", "Grade A office space Ahmedabad"],
+    "search_intent": "transactional/commercial",
+    "priority": "P0",
+    "updated": "2026-09-16"
+  },
+  {
+    "route": "/site-index",
+    "title": "Site Index | Ahmedabad Office & Project Guides",
+    "desc": "Browse every Million Minds Tech City, Ahmedabad office-space, location, commercial-property and research page available on this website.",
+    "eyebrow": "Complete page directory",
+    "h1": "Site Index: Ahmedabad Office & Project Guides",
+    "intro": "Use this directory to browse the complete set of indexable project, office-space, location and research resources published on this independent website. Pages are grouped by intent so visitors and crawlers can reach every important guide without relying only on the main navigation.",
+    "facts": [["Coverage", "Every canonical indexable HTML page"], ["Organisation", "Project, commercial, locality, research and trust"], ["Maintenance", "Generated automatically with the SEO build"]],
+    "sections": [["How to use this index", ["Start with the core project pages for Million Minds Tech City facts. Use the Ahmedabad office and location groups for non-branded commercial research, and the research section for decision checklists and comparisons.", "This directory is not an availability list. Current premises, prices, specifications and commercial terms must be confirmed through a dated written proposal."]]],
+    "siteIndex": true,
+    "faqs": [],
+    "related": ["/", "/office-space-ahmedabad", "/blog"],
+    "sources": [],
+    "primary_keyword": "Million Minds Tech City site index",
+    "secondary_keywords": ["Ahmedabad office guides", "Million Minds Tech City pages", "commercial property research Ahmedabad"],
+    "search_intent": "navigational",
+    "priority": "P2",
+    "updated": "2026-09-16"
   }
 ]

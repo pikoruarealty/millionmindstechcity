@@ -8,7 +8,7 @@
     "primary_keyword": "million minds tech city ahmedabad",
     "secondary_keywords": [
       "million minds tech city",
-      "million minds tech city office space",
+      "Million Minds Ahmedabad project guide",
       "MMTC Ahmedabad"
     ],
     "search_intent": "brand/entity",
@@ -300,7 +300,7 @@
     "primary_keyword": "office space Vaishnodevi Circle Ahmedabad",
     "secondary_keywords": [
       "commercial office near Vaishnodevi Circle",
-      "office space near Nirma University Ahmedabad"
+      "office space north SG Highway Ahmedabad"
     ],
     "search_intent": "commercial/research",
     "priority": "P1",
@@ -407,7 +407,7 @@
     "h1": "S.G. Highway Ahmedabad Business Location Guide",
     "primary_keyword": "SG Highway Ahmedabad business district",
     "secondary_keywords": [
-      "office space SG Highway Ahmedabad",
+      "SG Highway commercial corridor",
       "business park Ahmedabad SG Highway"
     ],
     "search_intent": "local informational",
@@ -1519,6 +1519,62 @@
       "FAQPage"
     ]
   },
+  "/office-space-ahmedabad": {
+    "slug": "/office-space-ahmedabad",
+    "canonical_url": "https://www.millionmindstechcity.in/office-space-ahmedabad",
+    "title": "Office Space in Ahmedabad | Rent & Leasing Guide",
+    "meta_description": "Find office space in Ahmedabad with a practical guide to locations, Grade A buildings, fitted and managed options, lease costs and due diligence.",
+    "h1": "Office Space for Rent in Ahmedabad",
+    "primary_keyword": "office space Ahmedabad",
+    "secondary_keywords": [
+      "office space for rent Ahmedabad",
+      "commercial office space Ahmedabad",
+      "office for lease Ahmedabad",
+      "Grade A office space Ahmedabad"
+    ],
+    "search_intent": "transactional/commercial",
+    "priority": "P0",
+    "last_modified": "2026-09-16",
+    "og_title": "Office Space in Ahmedabad | Rent & Leasing Guide",
+    "og_description": "Find office space in Ahmedabad with a practical guide to locations, Grade A buildings, fitted and managed options, lease costs and due diligence.",
+    "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject",
+      "FAQPage"
+    ]
+  },
+  "/site-index": {
+    "slug": "/site-index",
+    "canonical_url": "https://www.millionmindstechcity.in/site-index",
+    "title": "Site Index | Ahmedabad Office & Project Guides",
+    "meta_description": "Browse every Million Minds Tech City, Ahmedabad office-space, location, commercial-property and research page available on this website.",
+    "h1": "Site Index: Ahmedabad Office & Project Guides",
+    "primary_keyword": "Million Minds Tech City site index",
+    "secondary_keywords": [
+      "Ahmedabad office guides",
+      "Million Minds Tech City pages",
+      "commercial property research Ahmedabad"
+    ],
+    "search_intent": "navigational",
+    "priority": "P2",
+    "last_modified": "2026-09-16",
+    "og_title": "Site Index | Ahmedabad Office & Project Guides",
+    "og_description": "Browse every Million Minds Tech City, Ahmedabad office-space, location, commercial-property and research page available on this website.",
+    "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
+    "schema_types": [
+      "WebSite",
+      "Organization",
+      "Place",
+      "WebPage",
+      "BreadcrumbList",
+      "ImageObject"
+    ]
+  },
   "/million-minds-tech-city-master-plan": {
     "slug": "/million-minds-tech-city-master-plan",
     "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-master-plan",
@@ -1579,7 +1635,7 @@
     "slug": "/million-minds-tech-city-rent",
     "canonical_url": "https://www.millionmindstechcity.in/million-minds-tech-city-rent",
     "title": "Million Minds Tech City Rent & Availability Guide",
-    "meta_description": "Research Million Minds Tech City office rent and availability without invented rates. See what to request in a current M One leasing proposal and compare total cost.",
+    "meta_description": "Research Million Minds Tech City office rent and availability without invented rates. Learn what to request in a current M One leasing proposal.",
     "h1": "Million Minds Tech City Office Rent and Availability",
     "primary_keyword": "million minds tech city rent",
     "secondary_keywords": [
@@ -1591,7 +1647,7 @@
     "priority": "P1",
     "last_modified": "2026-09-13",
     "og_title": "Million Minds Tech City Rent & Availability Guide",
-    "og_description": "Research Million Minds Tech City office rent and availability without invented rates. See what to request in a current M One leasing proposal and compare total cost.",
+    "og_description": "Research Million Minds Tech City office rent and availability without invented rates. Learn what to request in a current M One leasing proposal.",
     "og_image": "https://www.millionmindstechcity.in/images/og/million-minds-tech-city-ahmedabad.jpg",
     "schema_types": [
       "WebSite",

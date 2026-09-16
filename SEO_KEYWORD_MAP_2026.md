@@ -1,4 +1,4 @@
-# Million Minds Tech City .in — Keyword & Page Map (61 indexable pages)
+# Million Minds Tech City .in — Keyword & Page Map (63 indexable pages)
 
 Updated: 13 September 2026  
 Primary domain: `https://www.millionmindstechcity.in`  
@@ -12,7 +12,7 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 
 | Priority | Index URL | Primary keyword | Secondary keyword cluster | Intent |
 |---|---|---|---|---|
-| P0 | `/` | million minds tech city ahmedabad | million minds tech city · million minds tech city office space · MMTC Ahmedabad | brand/entity |
+| P0 | `/` | million minds tech city ahmedabad | million minds tech city · Million Minds Ahmedabad project guide · MMTC Ahmedabad | brand/entity |
 | P0 | `/m-one-million-minds-tech-city` | M One Ahmedabad | M One Million Minds Tech City · M One Ahmedabad specifications | informational/commercial |
 | P0 | `/million-minds-tech-city-address-location` | million minds tech city address | million minds tech city location · million minds tech city Ahmedabad map | informational/navigational |
 | P0 | `/million-minds-tech-city-companies` | million minds tech city companies | companies in million minds tech city · million minds tech city occupiers | informational/navigational |
@@ -20,6 +20,7 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 | P0 | `/million-minds-tech-city-office-space` | million minds tech city office space | million minds tech city leasing · Grade A office space Ahmedabad | commercial |
 | P0 | `/million-minds-tech-city-sez` | million minds tech city SEZ | million minds tech city IT SEZ · IT SEZ Ahmedabad | informational/commercial |
 | P0 | `/million-minds-tech-city-specifications` | million minds tech city specifications | M One specifications Ahmedabad · million minds tech city floor plate | informational/commercial |
+| P0 | `/office-space-ahmedabad` | office space Ahmedabad | office space for rent Ahmedabad · commercial office space Ahmedabad · office for lease Ahmedabad · Grade A office space Ahmedabad | transactional/commercial |
 | P1 | `/areas-near-million-minds-tech-city` | areas near Million Minds Tech City | Million Minds Tech City nearby areas · office location near Nirma University · Vaishnodevi Circle office location · north Ahmedabad business areas | local informational/commercial |
 | P1 | `/blog` | million minds tech city blog | Ahmedabad office space guide · GCC Ahmedabad insights | editorial hub |
 | P1 | `/blog/best-office-locations-ahmedabad-gcc` | best office locations in ahmedabad for gcc teams |  | editorial/informational |
@@ -45,7 +46,7 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 | P1 | `/gcc-office-space-ahmedabad` | GCC office space Ahmedabad | Global Capability Centre office Ahmedabad · Gujarat GCC office space | commercial/research |
 | P1 | `/it-park-ahmedabad` | IT park Ahmedabad | tech park Ahmedabad · SEZ IT park Ahmedabad | commercial/research |
 | P1 | `/localities/nirma-university-ahmedabad` | office space near Nirma University Ahmedabad | commercial office near Nirma University · Million Minds Tech City Nirma University · office off SG Highway Ahmedabad | local commercial |
-| P1 | `/localities/s-g-highway-ahmedabad` | SG Highway Ahmedabad business district | office space SG Highway Ahmedabad · business park Ahmedabad SG Highway | local informational |
+| P1 | `/localities/s-g-highway-ahmedabad` | SG Highway Ahmedabad business district | SG Highway commercial corridor · business park Ahmedabad SG Highway | local informational |
 | P1 | `/localities/vaishnodevi-circle-ahmedabad` | Vaishnodevi Circle Ahmedabad office location | office near Vaishnodevi Circle · commercial property Vaishnodevi Circle Ahmedabad · Million Minds Tech City Vaishnodevi Circle | local commercial research |
 | P1 | `/luxury-office-space-ahmedabad` | luxury office space Ahmedabad | premium office space Ahmedabad · luxury commercial office SG Highway · high-end corporate office Ahmedabad · Grade A luxury office Ahmedabad | commercial |
 | P1 | `/million-minds-tech-city-brochure` | million minds tech city brochure | million minds tech city brochure PDF · M One brochure Ahmedabad · million minds tech city PDF | document/navigation |
@@ -54,7 +55,7 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 | P1 | `/million-minds-tech-city-rent` | million minds tech city rent | million minds tech city office rent · M One Ahmedabad rent · million minds tech city availability | commercial pricing research |
 | P1 | `/office-space-near-gift-city` | office space near GIFT City | office space Ahmedabad GIFT City corridor · commercial office near GIFT City Ahmedabad | commercial/research |
 | P1 | `/office-space-sg-highway-ahmedabad` | office space SG Highway Ahmedabad | Grade A office space SG Highway Ahmedabad · office leasing SG Highway Ahmedabad | commercial |
-| P1 | `/office-space-vaishnodevi-circle-ahmedabad` | office space Vaishnodevi Circle Ahmedabad | commercial office near Vaishnodevi Circle · office space near Nirma University Ahmedabad | commercial/research |
+| P1 | `/office-space-vaishnodevi-circle-ahmedabad` | office space Vaishnodevi Circle Ahmedabad | commercial office near Vaishnodevi Circle · office space north SG Highway Ahmedabad | commercial/research |
 | P1 | `/ready-to-move-office-space-ahmedabad` | ready to move office space Ahmedabad | furnished office space Ahmedabad · plug and play office Ahmedabad · ready office SG Highway · fitted office space Ahmedabad | transactional/commercial |
 | P1 | `/retail-space-sg-highway-ahmedabad` | retail space SG Highway Ahmedabad | retail space for rent SG Highway · commercial retail Ahmedabad · shop space near Vaishnodevi Circle · retail in office park Ahmedabad | transactional/commercial |
 | P1 | `/showroom-space-sg-highway-ahmedabad` | showroom space SG Highway Ahmedabad | showroom for rent SG Highway Ahmedabad · luxury showroom Ahmedabad · commercial showroom near Vaishnodevi Circle · retail showroom space Ahmedabad | transactional/commercial |
@@ -71,6 +72,7 @@ Each primary keyword has one owning URL. Secondary phrases are semantic variatio
 | P2 | `/managed-office-ahmedabad-sg-highway` | managed office SG Highway Ahmedabad | managed office Ahmedabad · managed workspace Million Minds Tech City | commercial/research |
 | P2 | `/million-minds-tech-city-amenities` | amenities at million minds tech city |  | informational |
 | P2 | `/privacy-policy` | privacy policy |  | informational |
+| P2 | `/site-index` | Million Minds Tech City site index | Ahmedabad office guides · Million Minds Tech City pages · commercial property research Ahmedabad | navigational |
 | P2 | `/sources-methodology` | sources & verification methodology |  | informational |
 | P2 | `/terms` | website terms |  | informational |
 
